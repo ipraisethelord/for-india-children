@@ -8,17 +8,17 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { Toolbar } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
-import styled from '@mui/system/styled';
+
 //import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 
 function Router() {
-    const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
+   
     const Layout = () => {
         return (
             <>
             <CssBaseline />
             <Header />
-           <Offset />
+           <Toolbar />
                 <Stack direction={{ xs: 'column', sm: 'row' }}  >
                     <Outlet />
                 </Stack>

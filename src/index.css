@@ -15,18 +15,17 @@
 } */
 
 a {
-  
   color: #ff9800;
   text-decoration: inherit;
 }
 a:hover {
   color: #ff9800;
 }
-a:active {
-  color:red;
-}
+/* a:active {
+  color: red;
+} */
 
-body {
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
@@ -38,7 +37,7 @@ img {
   height: auto;
   padding: 0;
   margin: 0;
-}
+} */
 /* h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -55,7 +54,7 @@ img {
   cursor: pointer;
   transition: border-color 0.25s;
 } */
-button:hover {
+/* /* /* button:hover {
   border-color: #ff9800;
 }
 button:focus,
@@ -65,7 +64,9 @@ button:focus-visible {
 button:active {
   color:red;
   font-weight: bold;
-}
+} */
+*/
+*/
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

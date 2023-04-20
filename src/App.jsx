@@ -12,6 +12,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 // import Contact from './components/pages/Contact';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Router from './components/reusable/Router';
+import CssBaseline from "@mui/material/CssBaseline";
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
   const theme = createTheme();
 
   return (
-    <ThemeProvider theme={theme}>    
+    <ThemeProvider theme={theme}> 
+     <CssBaseline />   
     <Router />
       {/* <Router>
           <Routes>

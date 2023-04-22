@@ -8,6 +8,8 @@ import img7 from '../../assets/childrenProfiles/47_boys_l.jpg';
 import img8 from '../../assets/childrenProfiles/02_student_l.jpg';
 import img9 from '../../assets/childrenProfiles/49_students_l.jpg';
 import img10 from '../../assets/childrenProfiles/60_boy_l.jpg';
+import img11 from '../../assets/childrenProfiles/24_boys_l.jpg';
+import img12 from '../../assets/childrenProfiles/13_boy_l.jpg';
 
 const ChildrenImageData=[{img:`${img1}`, title:"girl1"}, 
 {img: `${img2}`, "title": "boy"},
@@ -18,7 +20,9 @@ const ChildrenImageData=[{img:`${img1}`, title:"girl1"},
 {img: `${img7}`, "title": "boy"},
 {img: `${img8}`, "title": "boy"},
 {img: `${img9}`, "title": "boy"},
-{img: `${img10}`, "title": "boy"}
+{img: `${img10}`, "title": "boy"},
+{img: `${img11}`, "title": "boy"},
+{img: `${img12}`, "title": "boy"}
 
 
 ];

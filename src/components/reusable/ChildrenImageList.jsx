@@ -6,12 +6,12 @@ import ChildrenImageData from './ChildrenImageData';
 
 export default function ChildrenImageList() {
   return (
-    <ImageList sx={{ width: 800, height: 800 }} cols={4} rowHeight={164}>
+    <ImageList sx={{ width: 800, height: 610 }} cols={4} rowHeight={200}>
       {ChildrenImageData.map((item) => (
         <ImageListItem key={item.img}>
           <img
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+            src={`${item.img}?w=200&h=200&fit=crop&auto=format`}
+            srcSet={`${item.img}?w=200&h=200&fit=crop&auto=format&dpr=2 2x`}
             alt={item.title}
             loading="lazy"
           />

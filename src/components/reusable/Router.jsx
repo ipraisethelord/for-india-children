@@ -34,7 +34,7 @@ function Router() {
           <Header />
           <Box
             direction={{ xs: "column", sm: "row" }}
-            sx={{ backgroundColor: "grey" }}
+           
           >
             <Toolbar />
             <Outlet />

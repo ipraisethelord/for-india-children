@@ -17,7 +17,25 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 function App() {
   // const [count, setCount] = useState(0)
-  const theme = createTheme();
+  const theme = createTheme({
+components: {
+  MuiTypography: {
+    variants: [
+      {
+        props: { variant: "body2",},
+        style: { fontsize: 12,
+                  color:"crimson"}
+      },
+      {
+        props: { variant: "body3",},
+        style: { fontsize: 10,
+                  color:"cornflowerblue"},
+      },
+    ]
+  }
+}
+
+  });
 
   return (
     <ThemeProvider theme={theme}> 

@@ -8,7 +8,8 @@ import { Typography } from "@mui/material";
 function About() {
   return (
     <>
-      <Box sx={{ width: "100%" }} display="flex" minHeight="100vh">
+      <Box sx={{ width: "100%" }} display="flex" minHeight="100vh" justifyContent="center"
+  alignItems="center">
         <Stack spacing={2} alignItems="center">
           <Container>
             <Typography variant="h3" component="h2">

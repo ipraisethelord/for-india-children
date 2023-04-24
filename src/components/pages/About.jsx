@@ -1,12 +1,28 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import ChildrenImageList from "../reusable/ChildrenImageList";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+//import ChildrenImageList from "../reusable/ChildrenImageList";
 import AlbumChildren from "../reusable/AlbumChildren";
+import { Typography } from "@mui/material";
 function About() {
-    return ( <Container><h1>It's all about them</h1>
-    {/* <ChildrenImageList /> */}
-    <AlbumChildren />
-    </Container> );
+  return (
+    <>
+      <Box sx={{ width: "100%" }} display="flex" minHeight="100vh">
+        <Stack spacing={2} alignItems="center">
+          <Container>
+            <Typography variant="h3" component="h2">
+              It's all about
+            </Typography>
+            {/* <ChildrenImageList /> */}
+          </Container>
+          <Container>
+            <AlbumChildren />
+          </Container>
+        </Stack>
+      </Box>
+    </>
+  );
 }
 
 export default About;

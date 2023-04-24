@@ -11,18 +11,19 @@ import img10 from '../../assets/childrenProfiles/60_boy_l.jpg';
 import img11 from '../../assets/childrenProfiles/24_boys_l.jpg';
 import img12 from '../../assets/childrenProfiles/13_boy_l.jpg';
 
-const ChildrenImageData=[{img:`${img1}`, title:"girl1"}, 
-{img: `${img2}`, "title": "boy"},
-{img: `${img3}`, "title": "boy"},
-{img: `${img4}`, "title": "boy"},
-{img: `${img5}`, "title": "boy"},
-{img: `${img6}`, "title": "boy"},
-{img: `${img7}`, "title": "boy"},
-{img: `${img8}`, "title": "boy"},
-{img: `${img9}`, "title": "boy"},
-{img: `${img10}`, "title": "boy"},
-{img: `${img11}`, "title": "boy"},
-{img: `${img12}`, "title": "boy"}
+const ChildrenImageData=[
+    {img:`${img1}`,  title:	"girl", id:"1"}, 
+    {img: `${img2}`, title: "boy", id: "2"},
+    {img: `${img3}`, title: "boy", id: "3"},
+    {img: `${img4}`, title: "boy", id: "4"},
+    {img: `${img5}`, title: "boy", id: "5"},
+    {img: `${img6}`, title: "boy", id: "6"},
+    {img: `${img7}`, title: "boy", id: "7"},
+    {img: `${img8}`, title: "boy", id: "8"},
+    {img: `${img9}`, title: "boy", id: "9"},
+    {img: `${img10}`, title: "boy", id: "10"},
+    {img: `${img11}`, title: "boy", id: "11"},
+    {img: `${img12}`, title: "boy", id: "12"}
 
 
 ];

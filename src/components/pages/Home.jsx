@@ -10,6 +10,7 @@ import Grid  from "@mui/material/Grid";
 import CardCategory from "../reusable/CardCategory.jsx";
 import CardImage from "../reusable/CardImage";
 import categoryItems from "../../assets/data/data.json";
+import AlbumCategory from "../reusable/AlbumCategory";
 //import CategoryImageData from "../reusable/CategoryImageData";
 const StyledPaper = styled(Paper)({
   display: 'flex',
@@ -30,24 +31,17 @@ const StyledImage = styled('img')({
 function Home() {
   return (
     <>      
-    {/* necessary to remove gap between header and main content*/}
+   
   
-   {/* <StyledPaper sx={{backgroundImage: `url(${image})`, width:'100%', height: 'auto'}}> */}
-   <StyledPaper>
+   {/* <StyledPaper>
           
              <StyledImage src={givealittlehelpalot} alt='Give a little, help a lot' />
     </StyledPaper> 
-    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}    direction="row"
+  justifyContent="center"
+  alignItems="center"
+ >
    
-       {/* {items.map((item) => (
-         
-              <CardImage id={item.id}
-              name={item.name}
-              image={item.image}
-              total ={item.total}
-              key={item.id}
-              />  
-        ))} */}
          {categoryItems.map((cat) => (
          
          <Grid item xs={2} sm={3} md={3} key={cat.id} mt="25" >
@@ -59,8 +53,8 @@ function Home() {
    ))}
       </Grid>
       
-        
-    
+     */}    
+    <AlbumCategory />
       
     </>
   );

@@ -2,11 +2,13 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ChildrenImageData from './ChildrenImageData';
-
-
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Container from "@mui/material/Container";
 export default function ChildrenImageList() {
+  const matches = useMediaQuery('(min-width:600px)');
   return (
-    <ImageList sx={{ width: 800, height: 610 }} cols={4} rowHeight={200}>
+    <Container >
+    <ImageList sx={{ width: 800, height: 610 }} cols={matches ? 4: 2} rowHeight={200} spacing={8}>
       {ChildrenImageData.map((item) => (
         <ImageListItem key={item.img}>
           <img
@@ -18,53 +20,7 @@ export default function ChildrenImageList() {
         </ImageListItem>
       ))}
     </ImageList>
+    </Container>
   );
 }
 
-// const itemData = [
-//   {
-//     img: {ChildrenImageData},
-//     title: 'Breakfast',
-//   },
-//   {
-//     img: {img2},
-//     title: 'Burger',
-//   },
-//   {
-//     img: {img3},
-//     title: 'Camera',
-//   },
-//   {
-//     img: {img4},
-//     title: 'Coffee',
-//   },
-//   {
-//     img: {img5},
-//     title: 'Hats',
-//   },
-//   {
-//     img: {img5},
-//     title: 'Honey',
-//   },
-//   {
-//     img: {img6},
-//     title: 'Basketball',
-//   },
-//   {
-//     img: {img7},
-//     title: 'Fern',
-//   },
-//   {
-//     img: {img8},
-//     title: 'Mushrooms',
-//   },
-//   {
-//     img: {img9},
-//     title: 'Tomato basil',
-//   },
-//   {
-//     img: {img10},
-//     title: 'Sea star',
-//   },
- 
-// ];

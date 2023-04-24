@@ -5,17 +5,17 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Image from "./Image";
+
 export default function CardImage({ id, name, image, total }) {
 
 
   return (
     <>
     
-      <Card sx={{ maxWidth: 345 }} key={id}>
+      <Card sx={{ maxWidth: 400 }} key={id}>
        
          <CardMedia component='img'
-            sx={{ height: 240 }}
+            sx={{ height: 340 }}
             src={image}
             title={name}
             alt={name}
@@ -37,3 +37,13 @@ export default function CardImage({ id, name, image, total }) {
     </>
   );
 }
+
+       {/* {items.map((item) => (
+         
+              <CardImage id={item.id}
+              name={item.name}
+              image={item.image}
+              total ={item.total}
+              key={item.id}
+              />  
+        ))} */}

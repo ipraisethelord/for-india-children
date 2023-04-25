@@ -8,16 +8,16 @@ import { Typography } from "@mui/material";
 function About() {
   return (
     <>
-      <Box maxWidth={false}  display="flex" minHeight="100vh" justifyContent="center"
+      <Box sx={{ '&.MuiContainer-maxWidthLg': { width: '100%' } }} display="flex" minHeight="100vh" justifyContent="center"
   alignItems="center">
         <Stack spacing={2} alignItems="center">
-          <Container>
+          <Container maxWidth={false}>
             <Typography variant="h3" component="h2">
               It's all about
             </Typography>
             {/* <ChildrenImageList /> */}
           </Container>
-          <Container>
+          <Container maxWidth={false}>
             <AlbumChildren />
           </Container>
         </Stack>

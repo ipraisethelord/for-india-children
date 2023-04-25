@@ -7,7 +7,7 @@ import Container from "@mui/material/Container";
 export default function ChildrenImageList() {
   const matches = useMediaQuery('(min-width:600px)');
   return (
-    <Container >
+    <Container maxWidth={false}>
     <ImageList sx={{ width: 800, height: 610 }} cols={matches ? 4: 2} rowHeight={200} spacing={8}>
       {ChildrenImageData.map((item) => (
         <ImageListItem key={item.img}>

@@ -1,26 +1,21 @@
 import React from "react";
-
 import Button from "@mui/material/Button";
-
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-
 import data from "../../assets/data/data.json";
 
 export default function AlbumCategory() {
   return (
     <>
       {/* End hero unit */}
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%" , display: 'flex',  justifyContent: 'center',  alignItems: 'center',}}>
         <Stack spacing={2}>
           <Container>
             <Typography

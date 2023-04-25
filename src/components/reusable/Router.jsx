@@ -1,45 +1,29 @@
 import Header from "./Header";
-
 import Footer from "./Footer";
-
 import Home from "../pages/Home";
-
 import Contact from "../pages/Contact";
-
 import Faq from "../pages/Faq";
-
 import About from "../pages/About";
-
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-
-import { Toolbar } from "@mui/material";
-
-
-
-import Stack from "@mui/material/Stack";
-
+// import Toolbar  from "@mui/material/Toolbar";
+import Container from "@mui/material/Container";
+//import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-
-//import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
-
- 
+//import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom' 
 
 function Router() {
-
   const Layout = () => {
-
     return (
       <>       
-        <Box display="flex">
-          <Header />
+        <Container maxWidth={false}>
+          <Header />         
           <Box
             direction={{ xs: "column", sm: "row" }}
-           
-          >
-            <Toolbar />
+            sx={{ maxWidth: 'none', minWidth: 'none' }}
+          >           
             <Outlet />
           </Box>
-        </Box>
+        </Container>
         <Footer />
       </>
     );

@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import Faq from "../pages/Faq";
 import About from "../pages/About";
+import CategoryDetail from "../pages/CategoryDetail";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 // import Toolbar  from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
@@ -38,6 +39,8 @@ function Router() {
             <Route path="About" element={<About />} />
             <Route path="Faq" element={<Faq />} />
             <Route path="Contact" element={<Contact />} />
+            <Route path="Category" element={<CategoryDetail />} />
+            <Route path="Category/:id" element={<CategoryDetail />} />
           </Route>
         </Routes>
       </BrowserRouter>

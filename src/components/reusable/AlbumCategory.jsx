@@ -10,7 +10,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import data from "../../assets/data/data.json";
-
+import { Link } from "react-router-dom";
 export default function AlbumCategory() {
   return (
     <>
@@ -75,8 +75,8 @@ export default function AlbumCategory() {
                       <Typography>Total cost: {category.total}</Typography>
                     </CardContent>
                     <CardActions>
-                      <Button size="small">View</Button>
-                      <Button size="small">Edit</Button>
+                      <Button size="small" key={category.name} component={Link}  to={'/Category/id:'+ category.name}>View</Button>
+                     
                     </CardActions>
                   </Card>
                 </Grid>

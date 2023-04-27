@@ -7,8 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
 import emailjs from '@emailjs/browser';
-import dotenv from 'dotenv';
-dotenv.config();
+
 function Contact() {
  
   const [toSend, setToSend] = useState({
@@ -26,8 +25,8 @@ function Contact() {
   };
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_USER_ID)
+//this import.meta.env.VITE_KEY fixed process undefined as in process.env.REACT_APP_KEY
+    emailjs.sendForm(import.meta.env.VITE_APP_SERVICE_ID, import.meta.env.VITE_APP_TEMPLATE_ID, form.current, import.meta.env.VITE_APP_USER_ID)
       .then((result) => {
           console.log(result.text);
           setMsg("Your form has been submitted!")

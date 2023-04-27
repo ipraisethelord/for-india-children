@@ -14,7 +14,6 @@ import React from 'react';
 import Router from './components/reusable/Router';
 
 function App() { 
- 
   return (   
     <Router />
     

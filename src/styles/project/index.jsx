@@ -57,9 +57,7 @@ export const ProjectAddToCart = styled(Button, {
   background: Colors.secondary,
   opacity: 0.9,
 }));
-ProjectAddToCart.propTypes = {
-  show: PropTypes.bool.isRequired,
-}
+
 export const ProjectMetaWrapper = styled(Box)(({theme}) => ({
   padding: 4,
   display: "flex",

@@ -1,23 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-//import './App.css'
-import React from 'react';
-
-// import Container from './components/reusable/Container';
-// import Box from '@mui/material/Box';
-// import Home from './components/pages/Home';
-// import About from './components/pages/About';
-// import Faq from './components/pages/Faq';
-// import Contact from './components/pages/Contact';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Router from './components/reusable/Router';
+import "./App.css";
+import { Container, Typography, Box, Stack, Grid, Button } from "@mui/material";
+import Appbar from "./components/appbar";
+import { ThemeProvider } from "@mui/system";
+import theme from "./styles/theme";
+import Banner from "./components/banner";
+import Projects from "./components/projects";
+import { UIProvider } from "./context/ui";
+import Footer from "./components/footer";
+import AppDrawer from "./components/drawer";
+import Promotions from "./components/promotions";
+import SearchBox from "./components/search";
+import { useEffect } from "react";
+import Title from "./data/title";
+// import Router from './components/routes/Router';
 
 function App() { 
+  // useEffect(() => {
+  //   document.title = {Title};
+  // }, []);
+
+
   return (   
-    <Router />
-    
-  )
+    // <Router />
+    <ThemeProvider theme={theme}>
+    <Container
+      disableGutters
+      maxWidth="xl"
+      sx={{
+        background: "#fff",
+      }}
+    >
+      <Stack>
+        <UIProvider>
+          <Appbar />
+          <Banner />
+          <Promotions />
+          <SearchBox />
+          <Box display="flex" justifyContent="center" sx={{ p: 4 }}>
+            <Typography variant="h4">Projects</Typography>
+          </Box>
+          <Projects />
+          <Footer />
+          <AppDrawer />
+        </UIProvider>
+      </Stack>
+    </Container>
+  </ThemeProvider>
+);
 }
 
 export default App

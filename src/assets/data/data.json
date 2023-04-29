@@ -3,6 +3,7 @@
     "name": "building",
     "image": "/images/itemImages/schoolBuilding.jpg",
 	  "total": "$263,750.00",
+      "description": "The Baptist Academy CBSE school is in a critical situation as it urgently requires funding to complete construction. Although the construction is halfway done, the work has come to a halt due to a lack of funds. The existing progress will be wasted without additional funding. Your generous donation can help to complete the Baptist Academy CBSE school and provide a brighter future for young learners in India. Please consider making a contribution today.",
 	"items": 
 	[
             {
@@ -139,6 +140,8 @@
     "name": "classroom",
     "image": "/images/itemImages/classroom.jpg",
 	 "total": "$67,010.00",
+     "description": "The classrooms project includes interior finishing, providing the students with desks and chairs, and the teachers with offices, computers, and sound systems. Without these necessary furnishings, the school cannot effectively hold classes, which is detrimental to the education and development of the students. Your donation will not only help to complete the construction of the school building, but it will also provide the necessary resources to make sure that students receive a quality education.",
+
 	"items": 
 	[
     {
@@ -275,6 +278,7 @@
     "name": "lab_library",
     "image": "/images/itemImages/lab.jpg",
 	 "total": "$45,000.00",
+     "description": "A library, computer lab, and science labs are critical for students to learn and excel in their studies. The library will provide students with access to a vast collection of books, while the computer lab will enable them to learn and keep up with technological advancements. The science lab is essential for students to conduct experiments and understand scientific concepts. These facilities will give students the opportunity to explore, learn, and grow, but they require financial support to be established.",
 	"items": [
     {
         "id": "1",
@@ -337,16 +341,17 @@
 	{"id": 4,
     "name": "transportation",
     "image": "/images/itemImages/schoolBus.jpg",
-	 "total": "$550,000.00",
+	 "total": "$55,000.00",
+     "description": "The majority of the students' families do not have access to private transportation, and the location of the school has no public transportation options. It is essential for the school to provide safe and reliable transportation for its students.  With the two school buses, students will be able to get to school on time and safely.",
 	"items": 
 	[
     {
         "id": "1",
         "item": "Bus",
         "image": "../../assets/itemImages/deskAndChair.jpg",
-        "price": "$275,000.00",
+        "price": "$27,500.00",
         "quantity": "2",
-       "total": "$550,000.00"
+       "total": "$55,000.00"
     }
 	]
 	}

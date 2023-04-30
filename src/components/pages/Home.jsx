@@ -11,17 +11,26 @@ import Grid from "@mui/material/Grid";
 import CardCategory from "../reusable/CardCategory.jsx";
 import CardImage from "../reusable/CardImage";
 import categoryItems from "../../assets/data/data.json";
-
+import Banner from "../banner";
+import Promotions from "../promotions";
+import Projects from "../projects";
 //import CategoryImageData from "../reusable/CategoryImageData";
 
 function Home() {
   return (
-    <>    
-    <Box display="flex" bgcolor="lightblue" justifyContent="center">
+    <>  
+     <Banner />  
+     <Promotions />
+   
+      <Box display="flex" justifyContent="center" sx={{ p: 4 }}>
+        <Typography variant="h4">Projects</Typography>
+      </Box>
+      <Projects />
+    {/* <Box display="flex" bgcolor="lightblue" justifyContent="center">
         <Box sx={{ width: '100%' }}>
         <AlbumCategory />
         </Box>       
-    </Box>     
+    </Box>      */}
     </>
   );
 }

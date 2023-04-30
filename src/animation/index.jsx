@@ -36,8 +36,14 @@ export const textPopUpTop = keyframes`
             transform: translateY(-10px);
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #000, 0 2px 0 #000, 0 3px 0 #000, 0 4px 0 #000, 
-    0 5px 0 #000, 0 6px 0 #000, 0 7px 0 #000, 0 8px 0 #000, 0 9px 0 #000;
+            text-shadow: 0 1px 0 #1793db, 0 2px 0 #1793db, 0 3px 0 #1793db, 0 4px 0 #1793db, 
+0 5px 0 #1793db, 0 6px 0 #1793db, 0 7px 0 #1793db, 0 8px 0 #1793db, 0 9px 0 #1793db;
+/**light blue shaow **/
+           /* text-shadow: 0 1px 0 #00a2ff, 0 2px 0 #00a2ff, 0 3px 0 #00a2ff, 0 4px 0 #00a2ff, 
+0 5px 0 #00a2ff, 0 6px 0 #00a2ff, 0 7px 0 #00a2ff, 0 8px 0 #00a2ff, 0 9px 0 #00a2ff;*/
+/***dark shaddow **/
+   /* text-shadow: 0 1px 0 #000, 0 2px 0 #000, 0 3px 0 #000, 0 4px 0 #000, 
+    0 5px 0 #000, 0 6px 0 #000, 0 7px 0 #000, 0 8px 0 #000, 0 9px 0 #000;*/
     /* text-shadow: 0 1px 0 #000, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 
     0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc; */
   }

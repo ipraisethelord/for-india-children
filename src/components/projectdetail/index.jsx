@@ -13,7 +13,7 @@ import { useRef } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { Colors } from "../../styles/theme";
 import styled from "@emotion/styled";
-import { ProjectAddToCart, Project, ProjectImage } from "../../styles/project";
+import { ProjectToDonate, Project, ProjectImage } from "../../styles/project";
 import { BannerShopButton } from "../../styles/banner";
 import IncDec from "../ui/incdec";
 import FacebookIcon from "@mui/icons-material/Facebook";

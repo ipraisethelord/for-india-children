@@ -4,8 +4,8 @@ import {
   Project,
   ProjectActionButton,
   ProjectActionsWrapper,
-  ProjectAddToCart,
-  ProjectFavButton,
+  ProjectToDonate,
+  //ProjectFavButton,
   ProjectImage,
   ProjectMetaWrapper,
 } from "../../styles/project";
@@ -36,23 +36,23 @@ export default function SingleProject({ project, matches }) {
         <ProjectMeta project={project} matches={matches} />
         <ProjectActionsWrapper>
           <Stack direction={matches ? "row" : "column"}>
-            <ProjectFavButton isfav={0}>
+            {/* <ProjectFavButton isfav={0}>
               <FavoriteIcon />
-            </ProjectFavButton>
+            </ProjectFavButton> */}
             <ProjectActionButton>
               <Tooltip placement="left" title="share this project">
                 <ShareIcon color="primary" />
               </Tooltip>
             </ProjectActionButton>
             <ProjectActionButton onClick={() => showProjectDetailDialog()}>
-              <Tooltip placement="left" title="Full view">
+              <Tooltip placement="left" title="View Detail">
                 <FitScreenIcon color="primary" />
               </Tooltip>
             </ProjectActionButton>
           </Stack>
         </ProjectActionsWrapper>
       </Project>
-      <ProjectAddToCart variant="contained">Donate</ProjectAddToCart>
+      <ProjectToDonate variant="contained">Donate</ProjectToDonate>
       <ProjectDetailDialog project={project} />
     </>
   );

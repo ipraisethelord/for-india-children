@@ -9,21 +9,29 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArchiveIcon from "@mui/icons-material/Archive";
 import DonateModal from "../reusable/DonateModal";
 import ChildrenImageList from "../reusable/ChildrenImageList";
+import { Colors } from "../../styles/theme";
 export default function Faq() {
   const [value, setValue] = React.useState(0);
   return (
-    <Container sx={{ width: 900 }}>
+    <Box sx={{ bgcolor: Colors.light_gray, pt:2,pl:10 }} display="flex" minHeight="100vh" flexDirection="column">
+    <Box display="flex" justifyContent="flex-start">
+      
       <Typography variant="h3" component="h1" marginTop={3}>
         Immerse into the Falls
       </Typography>
-      <Box marginTop={3} sx={{ display: "flex" }}>
+     
+      </Box>
+      <Box display="flex" marginTop={3} justifyContent="flex-end">
+      
       
         <ChildrenImageList />
       </Box>
+      <Box display="flex" justifyContent="flex-start">
       <Typography variant="h6" component="h4" marginTop={3}>
         About this ticket
       </Typography>
-      <Box sx={{ display: "flex" }}>
+      </Box>
+      <Box  display="flex" justifyContent="flex-start">
         <Typography variant="paragraph" component="p" marginY={3}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
           voluptates rem quos delectus debitis earum modi, ipsum veritatis.
@@ -52,6 +60,7 @@ export default function Faq() {
           <DonateModal />
         </BottomNavigation>
       </Paper>
-    </Container>
+      </Box>
+  
   );
 }

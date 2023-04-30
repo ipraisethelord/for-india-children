@@ -5,8 +5,9 @@ import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-
+import { Colors } from "../../styles/theme";
 import emailjs from '@emailjs/browser';
+import Box from "@mui/material/Box";
 
 function Contact() {
  
@@ -35,8 +36,11 @@ function Contact() {
       });
   };
   return (
-    <>
+    <Box sx={{ bgcolor: Colors.light_gray, pt:2,pl:10 }} display="flex" minHeight="100vh" flexDirection="column">
+    <Box display="flex" justifyContent="flex-start">
      <Typography variant="h3">Get in Touch</Typography>
+     </Box>
+    <Box display="flex" justifyContent="center">
       <Grid>
         <Card style={{ maxWidth: 700, padding: "20px 5px", margin: "0 auto" }}>
           <CardContent >
@@ -125,7 +129,8 @@ function Contact() {
           </CardContent>
         </Card>
       </Grid>
-    </>
+      </Box>
+    </Box>
   );
 }
  

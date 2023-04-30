@@ -4,13 +4,13 @@ import {
   Project,
   ProjectActionButton,
   ProjectActionsWrapper,
-  ProjectAddToCart,
-  ProjectFavButton,
+  ProjectToDonate,
+  // ProjectFavButton,
   ProjectImage,
   ProjectMetaWrapper,
 } from "../../styles/project";
 import { Stack, Tooltip, Typography } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+//import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import FitScreenIcon from "@mui/icons-material/FitScreen";
 import useDialogModal from "../../hooks/useDialogModal";
@@ -35,14 +35,14 @@ export default function SingleProjectDesktop({ project, matches }) {
     <>
       <Project onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <ProjectImage src={project.image} />
-        <ProjectFavButton isfav={0}>
+        {/* <ProjectFavButton isfav={0}>
           <FavoriteIcon />
-        </ProjectFavButton>
+        </ProjectFavButton> */}
          {/* !! make showOptions to be bollean  */}
-        {!!(showOptions || matches) && (
-          <ProjectAddToCart show={showOptions} variant="contained"> 
+        {(showOptions || matches) && (
+          <ProjectToDonate  show={showOptions} variant="contained"> 
             DONATE
-          </ProjectAddToCart>
+          </ProjectToDonate >
         )}
        
         <ProjectActionsWrapper show={(showOptions || matches)}>
@@ -53,7 +53,7 @@ export default function SingleProjectDesktop({ project, matches }) {
               </Tooltip>
             </ProjectActionButton>
             <ProjectActionButton onClick={() => showProjectDetailDialog()}>
-              <Tooltip placement="left" title="Full view">
+              <Tooltip placement="left" title="View Detail">
                 <FitScreenIcon color="primary" />
               </Tooltip>
             </ProjectActionButton>

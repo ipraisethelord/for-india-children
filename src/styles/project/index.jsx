@@ -31,16 +31,16 @@ export const ProjectActionButton = styled(IconButton)(() => ({
   margin: 4,
 }));
 
-export const ProjectFavButton = styled(ProjectActionButton)(({ isfav, theme }) => ({
-  color: isfav ? Colors.primary : Colors.light,  
-  [theme.breakpoints.up("md")]: {
-    position: "absolute",
-    right: 0,
-    top: 0,
-  },
-}));
+// export const ProjectFavButton = styled(ProjectActionButton)(({ isfav, theme }) => ({
+//   color: isfav ? Colors.primary : Colors.light,  
+//   [theme.breakpoints.up("md")]: {
+//     position: "absolute",
+//     right: 0,
+//     top: 0,
+//   },
+// }));
 
-export const ProjectAddToCart = styled(Button, {
+export const ProjectToDonate = styled(Button, {
   shouldForwardProp: (prop) => prop !== "show",
 })(({ show, theme }) => ({
   width: "120px",
@@ -56,6 +56,12 @@ export const ProjectAddToCart = styled(Button, {
   },
   background: Colors.secondary,
   opacity: 0.9,
+  "&:focus": {
+    backgroundColor: Colors.primary, // change the color to your desired color
+  },
+  "&:hover": {
+    background: Colors.primary, // change this to your desired color
+  },
 }));
 
 export const ProjectMetaWrapper = styled(Box)(({theme}) => ({

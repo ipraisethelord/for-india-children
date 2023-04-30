@@ -10,3 +10,5 @@ export const messages = [
     "Your donation changes lives.",
     "Give a little, help a lot",
   ];
+
+export  const NavItems = ['Home', 'About', 'Faq','Projects', 'Contact'];

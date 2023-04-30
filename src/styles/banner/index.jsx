@@ -31,7 +31,7 @@ export const BannerImage = styled("img")(({ src, theme }) => ({
   // backgroundImage: `url(${src})`,
   // backgroundRepeat: "no-repeat",
   // backgroundPosition: "center",
-  width: "650px",
+  width: "auto",
   [theme.breakpoints.down("md")]: {
     width: "350px",
   },

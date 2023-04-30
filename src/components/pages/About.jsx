@@ -1,29 +1,27 @@
 import React from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 //import ChildrenImageList from "../reusable/ChildrenImageList";
 import AlbumChildren from "../reusable/AlbumChildren";
 import { Typography } from "@mui/material";
+import { Colors } from "../../styles/theme";
 function About() {
   return (
-    <>
-      <Box sx={{ '&.MuiContainer-maxWidthLg': { width: '100%' } }} display="flex" minHeight="100vh" justifyContent="center"
-  alignItems="center">
-        <Stack spacing={2} alignItems="center">
-          <Container maxWidth={false}>
-            <Typography variant="h3" component="h2">
-              It's all about
-            </Typography>
-            {/* <ChildrenImageList /> */}
-          </Container>
-          <Container maxWidth={false}>
-            <AlbumChildren />
-          </Container>
-        </Stack>
-      </Box>
-    </>
+ 
+      
+   <Box sx={{ bgcolor: Colors.light_gray, pt:2,pl:10 }} display="flex" minHeight="100vh"  >
+    <Stack>
+      <Typography variant="h4" >
+              it about them
+      </Typography>
+      <AlbumChildren />
+    </Stack>
+   </Box>
+
   );
 }
 
 export default About;
+

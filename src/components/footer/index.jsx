@@ -8,7 +8,7 @@ import {
   Stack,
   Container,
 } from "@mui/material";
-import { Box } from "@mui/system";
+import  Box  from "@mui/material/Box";
 import { Colors } from "../../styles/theme";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -32,9 +32,11 @@ export default function Footer() {
         <Grid item md={6} lg={4}>
           <FooterTitle variant="body1">About us</FooterTitle>
           <Typography variant="caption2">
-            Lorem ipsum dolor sit amet cons adipisicing elit sed do eiusm tempor
-            incididunt ut labor et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud.
+          We are a ministry under the South India Baptist Bible College & Seminary dedicated to educating and 
+          empowering India's children to reach their full potential. Our mission is to create an extraordinary 
+          academic environment that challenges, encourages, and trains towards holistic development.
+           We aim to equip and empower our students for transformational living to impact the world in 
+           a significant way. Join us in our mission to build the Baptist Academy CBSE school by donating now.
           </Typography>
           <Box
             sx={{
@@ -72,7 +74,7 @@ export default function Footer() {
             </ListItemText>
           </List>
         </Grid>
-        <Grid item md={6} lg={2}>
+        {/* <Grid item md={6} lg={2}>
           <FooterTitle variant="body1">my account</FooterTitle>
           <List>
             <ListItemText>
@@ -96,7 +98,7 @@ export default function Footer() {
               </Typography>
             </ListItemText>
           </List>
-        </Grid>
+        </Grid> */}
         <Grid item md={6} lg={4}>
           <FooterTitle variant="body1">newsletter</FooterTitle>
           <Stack>

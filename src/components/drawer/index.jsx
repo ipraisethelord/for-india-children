@@ -5,6 +5,7 @@ import {
     Drawer,
     IconButton,
     List,
+    ListItem,
     ListItemButton,
     ListItemText,
     styled,
@@ -14,7 +15,8 @@ import {
   import { DrawerCloseButton } from "../../styles/appbar";
   import { lighten } from "polished";
   import { Colors } from "../../styles/theme";
-  
+  import { NavItems } from "../../data/title";
+  import { NavLink } from "react-router-dom";
   const MiddleDivider = styled((props) => (
     <Divider variant="middle" {...props} />
   ))``;
@@ -36,8 +38,16 @@ import {
           </DrawerCloseButton>
         )}
         <Drawer open={drawerOpen}>
+         
           <List>
-            <ListItemButton>
+          {NavItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton component={NavLink} to={'/'+ (item=='Home'?'':item)}>
+              <ListItemText primary={item} />
+            </ListItemButton>
+          </ListItem>
+        ))}     
+            {/* <ListItemButton>
               <ListItemText>Home</ListItemText>
             </ListItemButton>
             <MiddleDivider />
@@ -55,9 +65,9 @@ import {
             <MiddleDivider />
             <ListItemButton>
               <ListItemText>Contact Us</ListItemText>
-            </ListItemButton>
+            </ListItemButton> */}
             <MiddleDivider />
-          </List>
+            </List>
         </Drawer>
       </>
     );

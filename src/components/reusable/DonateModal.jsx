@@ -1,10 +1,12 @@
 
 import React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-
+import { TextField } from "@mui/material";
+import DonateButton from "../papalDonate/donateForm";
 
 const style = {
   position: "absolute",
@@ -19,10 +21,19 @@ const style = {
 };
 
 export default function DonateModal() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [amount, setAmount] = useState(0.00);
+  const handleChange = (e) => {
+    setValues(parseInt(e.target.value));
+    setAmount(e.target.value);
+    console.log(amount);
+  };
+  const handleSubmit = (e) =>{
 
+
+  }
   return (
     <div>
       <Button onClick={handleOpen}>Donate now</Button>
@@ -33,7 +44,23 @@ export default function DonateModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-         Donate Form Here
+        <form>
+
+        <TextField
+          style={{ width: "200px", margin: "5px" }}
+          type="number"
+          label="Donate Amount "
+          variant="outlined"
+          value={amount}
+          onChange={handleChange}
+        />
+        <br />
+
+        <br />
+        <button >Donate By Paypal</button>
+
+</form>
+       <DonateButton />
         </Box>
       </Modal>
     </div>

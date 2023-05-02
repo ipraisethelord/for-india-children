@@ -38,6 +38,10 @@ const theme = createTheme({
     secondary: {
       main: Colors.secondary,
     },
+    selected: {
+      main: Colors.black,
+      light: Colors.success,
+    },
   },
 
   components: {

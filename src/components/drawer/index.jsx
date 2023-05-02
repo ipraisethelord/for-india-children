@@ -17,6 +17,7 @@ import {
   import { Colors } from "../../styles/theme";
   import { NavItems } from "../../data/title";
   import { NavLink } from "react-router-dom";
+  import { useState } from "react";
   const MiddleDivider = styled((props) => (
     <Divider variant="middle" {...props} />
   ))``;
@@ -24,7 +25,15 @@ import {
   
   export default function AppDrawer() {
     const { drawerOpen, setDrawerOpen } = useUIContext();
+    const [selectedItem, setSelectedItem] = useState(null);
+    const handleItemClick = (item) => {
+      setSelectedItem(item);
+    };
   
+    const StyledListItemButton = styled(ListItemButton)(({ theme, selected }) => ({
+      color: selected ? theme.palette.selected.main: "white",
+    }));
+
     return (
       <>
         {drawerOpen && (
@@ -37,35 +46,21 @@ import {
             />
           </DrawerCloseButton>
         )}
-        <Drawer open={drawerOpen}>
-         
+        <Drawer open={drawerOpen}>         
           <List>
           {NavItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton component={NavLink} to={'/'+ (item=='Home'?'':item)}>
-              <ListItemText primary={item} />
-            </ListItemButton>
+          <StyledListItemButton
+                selected={selectedItem === item}
+                onClick={() => handleItemClick(item)}
+                component={NavLink}
+                to={"/" + (item == "Home" ? "" : item)}
+              >
+                <ListItemText primary={item} />
+              </StyledListItemButton>
           </ListItem>
         ))}     
-            {/* <ListItemButton>
-              <ListItemText>Home</ListItemText>
-            </ListItemButton>
-            <MiddleDivider />
-            <ListItemButton>
-              <ListItemText>Categories</ListItemText>
-            </ListItemButton>
-            <MiddleDivider />
-            <ListItemButton>
-              <ListItemText>Projects</ListItemText>
-            </ListItemButton>
-            <MiddleDivider />
-            <ListItemButton>
-              <ListItemText>About Us</ListItemText>
-            </ListItemButton>
-            <MiddleDivider />
-            <ListItemButton>
-              <ListItemText>Contact Us</ListItemText>
-            </ListItemButton> */}
+            
             <MiddleDivider />
             </List>
         </Drawer>

@@ -1,5 +1,7 @@
 import { Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/system";
+import Box from "@mui/material/Box";
+import DonateButton from "../papalDonate/donateWithBlue";
 import {
   BannerContainer,
   BannerContent,
@@ -11,7 +13,7 @@ import {
   usePayPalScriptReducer
 } from "@paypal/react-paypal-js";
 import ButtonWrapper from "../donate";
-
+import DonateModal from "../donate/donateModal.jsx";
 
 export default function Banner() {
   const theme = useTheme();
@@ -20,7 +22,9 @@ export default function Banner() {
 
   return (
     <BannerContainer>
+     
       <BannerImage src="/images/banner/1banner.png" />
+  
       <BannerContent>
         <Typography variant="h6">
           Make a difference with your gifts!
@@ -35,9 +39,9 @@ export default function Banner() {
           support, we can unlock the limitless potential of these students and
           make a lasting difference.
         </BannerDescription>
-       
-          <ButtonWrapper currency={"USD"} />
-       
+       <DonateModal />
+          {/* <ButtonWrapper currency={"USD"} /> */}
+       <DonateButton />
       </BannerContent>
     </BannerContainer>
   );

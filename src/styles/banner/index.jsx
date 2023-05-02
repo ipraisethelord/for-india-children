@@ -13,13 +13,12 @@ export const BannerContainer = styled(Box)(({ matches, theme }) => ({
     flexDirection: "column",
     alignItems: "center",
   },
-  // backgroundImage: `url(/images/banner/banner.png)`,
-  // backgroundRepeat: "no-repeat",
-  // backgroundPosition: "center",
+ 
 }));
 
 export const BannerContent = styled(Box)(() => ({
   display: "flex",
+ 
   flexDirection: "column",
   justifyContent: "center",
   maxWidth: 600,
@@ -28,10 +27,7 @@ export const BannerContent = styled(Box)(() => ({
 
 export const BannerImage = styled("img")(({ src, theme }) => ({
   src: `url(${src})`,
-  // backgroundImage: `url(${src})`,
-  // backgroundRepeat: "no-repeat",
-  // backgroundPosition: "center",
-  width: "auto",
+
   [theme.breakpoints.down("md")]: {
     width: "350px",
   },

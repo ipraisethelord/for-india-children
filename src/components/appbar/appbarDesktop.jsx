@@ -10,14 +10,14 @@ import {
     Toolbar,
     Typography,
   } from "@mui/material";
-  import {
-   
+  import {   
     AppbarContainer,
     AppbarHeader,
     
-    
     MyList,
   } from "../../styles/appbar";
+  import { styled } from "@mui/material/styles";
+  import {useState} from "react";
   import PersonIcon from "@mui/icons-material/Person";
   //import FavoriteIcon from "@mui/icons-material/Favorite";
   import SearchIcon from "@mui/icons-material/Search";
@@ -26,35 +26,57 @@ import {
   import { useUIContext } from "../../context/ui";
   import Title, {ThemeVerse, NavItems} from "../../data/title";
   import { NavLink } from "react-router-dom";
+  import { lighten } from "polished";
   //import Logo from "/public/logo.png";
   export default function AppbarDesktop({ matches }) {
     
-    // const { setShowSearchBox } = useUIContext();
-   
+    const [selectedItem, setSelectedItem] = useState(null);
+
+    const handleItemClick = (item) => {
+      setSelectedItem(item);
+    };
+  
+    // const StyledListItemButton = styled(ListItemButton)(({ theme, selected }) => ({
+    //   color: selected ? theme.palette.primary.main : theme.palette.text.primary,
+    //   backgroundColor: selected ? theme.palette.primary.main : "transparent",
+    //   "&:hover": {
+    //     backgroundColor: selected ? theme.palette.primary.main : lighten(0.85, theme.palette.text.primary),
+    //     color: selected ? "#fff" : theme.palette.primary.main
+    //   },
+    //   ...(selected && { "& .MuiListItemText-primary": { fontWeight: theme.typography.fontWeightBold }})
+    // }));
+    
+    const StyledListItemButton = styled(ListItemButton)(({ theme, selected }) => ({
+      color: selected ? theme.palette.primary.main : theme.palette.text.primary,
+      "&.Mui-selected": {
+        backgroundColor: "transparent",
+      },
+      "&:hover": {
+        backgroundColor: "transparent !important",
+      },
+      ...(selected && { "& .MuiListItemText-primary": { fontWeight: theme.typography.fontWeightBold }})
+    }));
     return (
       <AppbarContainer>          
-        {/* <img src= "/logo.png" alt='build school for children' style={{ display: "block", marginRight: "auto", marginLeft: 0 }} />     */}
-   
-    {/* <AppbarHeaderFixTop>    
-      <ThemeVerse />
-    </AppbarHeaderFixTop> */}
+      
     
         <AppbarHeader variant="h4"><Title /></AppbarHeader>       
         <MyList type="row">
       
         {NavItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }} component={NavLink} to={'/'+ (item=='Home'?'':item)}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}     
+        <StyledListItemButton
+          key={item}
+          selected={selectedItem === item}
+          onClick={() => handleItemClick(item)}
+          sx={{ textAlign: "center" }}
+          component={NavLink}
+          to={"/" + (item === "Home" ? "" : item)}
+        >
+          <ListItemText primary={item} />
+        </StyledListItemButton>
+      ))} 
          
-          {/* <ListItemButton onClick={() => setShowSearchBox(true)}>
-            <ListItemIcon>
-              <SearchIcon />
-            </ListItemIcon>
-          </ListItemButton> */}
+         
             </MyList>
          <Actions matches={matches} />      
       </AppbarContainer>

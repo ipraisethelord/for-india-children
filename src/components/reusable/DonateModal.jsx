@@ -55,11 +55,10 @@ export default function DonateModal() {
           onChange={handleChange}
         />
         <br />
-
         <br />
         <button >Donate By Paypal</button>
 
-</form>
+      </form>
        <DonateButton />
         </Box>
       </Modal>

@@ -9,10 +9,10 @@ import DialogActions from "@mui/material/DialogActions";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import {
-  PayPalScriptProvider,
-  PayPalButtons,
-} from "@paypal/react-paypal-js";
+// import {
+//   PayPalScriptProvider,
+//   PayPalButtons,
+// } from "@paypal/react-paypal-js";
 
 const DonateForm = () => {
   const [amount, setAmount] = useState("");
@@ -59,10 +59,10 @@ const DonateForm = () => {
       });
     };
 
-    return (
-      <PayPalScriptProvider options={paypalOptions}>
-        <PayPalButtons createOrder={createOrder} onApprove={onApprove} />
-      </PayPalScriptProvider>
+    return (<></>
+      // <PayPalScriptProvider options={paypalOptions}>
+      //   <PayPalButtons createOrder={createOrder} onApprove={onApprove} />
+      // </PayPalScriptProvider>
     );
   };
 

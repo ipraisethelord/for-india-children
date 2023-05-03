@@ -1,20 +1,17 @@
 import { Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/system";
 import Box from "@mui/material/Box";
-import DonateButton from "../papalDonate/donateWithBlue";
+
 import {
   BannerContainer,
   BannerContent,
   BannerDescription,
   BannerImage,
 } from "../../styles/banner";
-import {
-  PayPalScriptProvider,
-  usePayPalScriptReducer
-} from "@paypal/react-paypal-js";
-import ButtonWrapper from "../donate";
-import DonateModal from "../donate/donateModal.jsx";
-
+// import DonateButton from "../donate-paypal";
+// import DonateButton from "../donatePaypalSite";
+ import DonateModal from "../donate/donateModal";
+import DonatePaypalSite from "../donate/donatePaypalSite";
 export default function Banner() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
@@ -39,9 +36,10 @@ export default function Banner() {
           support, we can unlock the limitless potential of these students and
           make a lasting difference.
         </BannerDescription>
-       <DonateModal />
-          {/* <ButtonWrapper currency={"USD"} /> */}
-       <DonateButton />
+        <DonateModal /> 
+        {/* <DonateButton /> */}
+     {/* <DonateButton /> */}
+     <DonatePaypalSite />
       </BannerContent>
     </BannerContainer>
   );

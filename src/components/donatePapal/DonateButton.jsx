@@ -10,11 +10,11 @@ export default function DonateButton({ amount }) {
   }, [amount]);
   const [error, setError] =useState("");
   const [approve, setApprove] =useState("");
+  const [status, setStatus] =useState();
   const debug = true;
   return (<><div>{error}</div><div>{approve}</div>
     <PayPalButtons
-      style={{ label: "donate" }}
-      fundingSource="paypal"
+      style={{ label: "donate" }}     
       createOrder={(data, actions) => {
         return actions.order.create({
           purchase_units: [
@@ -27,6 +27,9 @@ export default function DonateButton({ amount }) {
                     value: amountRef.current,
                   },
                 },
+              },  
+              application_context: {
+                shipping_preference: "NO_SHIPPING"
               },
               items: [
                 {

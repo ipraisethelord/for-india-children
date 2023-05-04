@@ -6,17 +6,21 @@ import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import TextField from '@mui/material/TextField';
 import DonateApp from '../donatePapal';
+
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 600,
+  maxHeight: '90vh', // add this
+  overflowY: 'auto', // add this
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
 };
+
 
 export default function DonateModal() {
   const [open, setOpen] = React.useState(false);
@@ -28,7 +32,9 @@ export default function DonateModal() {
   };
   return (
     <div>
-      <Button onClick={handleOpen}  variant="contained">DONATE</Button>
+      <Button onClick={handleOpen} variant="contained">
+        DONATE
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -44,7 +50,7 @@ export default function DonateModal() {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Make a Donation
           </Typography>
-        <DonateApp />
+          <DonateApp />
         </Box>
       </Modal>
     </div>

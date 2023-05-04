@@ -9,6 +9,8 @@ import { Typography } from "@mui/material";
 import { Colors } from "../../styles/theme";
 import DonateModal from "../reusable/DonateModal";
 import DonateForm from "../papalDonate/donateForm";
+import DonateApp from "../donateNew";
+import PayPalAppDonate from "../donateNew/paypal-app-donate";
 function About() {
   return (
  
@@ -22,8 +24,10 @@ We believe that every child deserves the opportunity to reach their full potenti
 
       </Typography>
       <AlbumChildren />
-      <DonateModal />
-      <DonateForm />
+      {/* <DonateModal />
+      <DonateForm /> */}
+      {/* <DonateApp /> */}
+      <PayPalAppDonate />
     </Stack>
 
    </Box>

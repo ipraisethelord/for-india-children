@@ -8,12 +8,13 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
+
 const ButtonWrapper = ({ currency }) => {
     // usePayPalScriptReducer can be use only inside children of PayPalScriptProviders
     // This is the main reason to wrap the PayPalButtons in a new component
     const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
     const [status, setStatus] = useState();
-    const [donation, setDonation] = useState("5");
+    
     
     useEffect(() => {
         dispatch({
@@ -24,7 +25,7 @@ const ButtonWrapper = ({ currency }) => {
             },
         });
     }, [currency]);
-
+    const [donation, setDonation] = useState(7);
     console.log("passed " + donation);
     
     return (
@@ -53,28 +54,33 @@ const ButtonWrapper = ({ currency }) => {
                     return actions.order.create({
                         purchase_units: [
                             {
-                                amount: {
+                              amount: {
+                                value: donation,
+                                breakdown: {
+                                  item_total: {
+                                    currency_code: "USD",
                                     value: donation,
-                                    breakdown: {
-                                        item_total: {
-                                            currency_code: "USD",
-                                            value: donation,
-                                        },
-                                    },
+                                  },
                                 },
-                                items: [
-                                    {
-                                        name: "build-school",
-                                        quantity: "1",
-                                        unit_amount: {
-                                            currency_code: "USD",
-                                            value: donation,
-                                        },
-                                        category: "DONATION",
-                                    },
-                                ],
+                              },  
+                              application_context: {
+                                shipping_preference: "NO_SHIPPING"
+                              },
+                              items: [
+                                {
+                                  name: "Donation to build school",
+                                  description:
+                                    "All proceeds directly support building of the Baptist Academy CBSE school. Thank you.",
+                                  quantity: "1",
+                                  unit_amount: {
+                                    currency_code: "USD",
+                                    value: donation,
+                                  },
+                                  category: "DONATION",
+                                },
+                              ],
                             },
-                        ],
+                          ],
                     }).then((orderId) => {
                         // Your code here after create the donation
                         setStatus(true);

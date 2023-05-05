@@ -9,8 +9,10 @@ import { Typography } from "@mui/material";
 import { Colors } from "../../styles/theme";
 import DonateModal from "../reusable/DonateModal";
 import DonateForm from "../papalDonate/donateForm";
-import DonateApp from "../donateNew";
+//import DonateApp from "../donateNew";
 import PayPalAppDonate from "../donateNew/paypal-app-donate";
+import PaypalDonateApp from "../donateClass/donatePayPal";
+import DonateApp from "../donatePapal";
 function About() {
   return (
  
@@ -26,8 +28,9 @@ We believe that every child deserves the opportunity to reach their full potenti
       <AlbumChildren />
       {/* <DonateModal />
       <DonateForm /> */}
-      {/* <DonateApp /> */}
-      <PayPalAppDonate />
+      <DonateApp />
+      {/* <PayPalAppDonate /> */}
+      {/* <PaypalDonateApp /> the error is actions is not defined */}
     </Stack>
 
    </Box>

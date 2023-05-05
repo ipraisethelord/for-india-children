@@ -11,15 +11,16 @@ export default function DonateApp() {
   return (
     <PayPalScriptProvider
       options={{
-        "client-id": import.meta.env.VITE_APP_CLIENT_ID,
+        "client-id": id,
         "enable-funding": "venmo",
        
         currency: "USD",
       }}
     >
       <DonationCardText>
-        <DonateForm />
+      <DonateForm />
       </DonationCardText>
+     
     </PayPalScriptProvider>
    );
 }

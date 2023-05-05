@@ -8,9 +8,16 @@ import Typography from '@mui/material/Typography';
 
 export default function DonationCardText({children}) {
   return (
-    <Card>
+    <Card
+        sx={{ width: {
+                      sx: 1.0, // 100%
+                      sm: 250,
+                      md: 350,
+                    },
+             }}
+    >
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 140, width:300 }}
         image="/images/projects/schoolBuilding.jpg"
         title="unfinished school building"
       />

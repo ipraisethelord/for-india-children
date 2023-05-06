@@ -2,51 +2,62 @@ import { Stack, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import DonateButton from "./DonateButton";
 
-const min = 5.00;
+const MIN_AMOUNT = 10.00;
 
 export default function DonateForm() {
-  const [amount, setAmount] = useState(min.toString());
+  const [amount, setAmount] = useState("10");
   const [donationSuccessful, setDonationSuccessful] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
-    if (e.target.value === "") {
-      setAmount(e.target.value);
+    setAmount(e.target.value);
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    if (!isValidNumber(amount)) {
+      setErrorMessage("Please enter a valid number.");
       return;
     }
 
-    const value = parseFloat(e.target.value);
-    if (value < min) {
-      setAmount(min.toString());
-    } else {
-      setAmount(value.toFixed(2));
+    if (parseFloat(amount) < MIN_AMOUNT) {
+      setErrorMessage(`Minimum donation amount is $${MIN_AMOUNT}.`);
+      return;
     }
+
+    setErrorMessage("");
+    // submit form
+  };
+
+  const isValidNumber = (input) => {
+    return !isNaN(parseFloat(input)) && isFinite(input);
   };
 
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form onSubmit={handleFormSubmit}>
       {donationSuccessful ? (
-        <Typography variant="h6" >Thank you for your donation!</Typography>
+        <Typography variant="h6">Thank you for your donation!</Typography>
       ) : (
         <Stack>
-          $<TextField
-            style={{ width: "200px", margin: "5px" }}
-            type="number"
-            label="Donate Amount"
+          <TextField
+            style={{ width: "400px", margin: "5px" }}
+            label="Donate Amount (US$)"
             variant="outlined"
             value={amount}
             onChange={handleChange}
-            inputProps={{
-              step: "1.00",
-              min: min,
-            }}
           />
-         
-
-         <DonateButton amount={amount} setDonationSuccessful={setDonationSuccessful} />
-
+          {errorMessage && (
+            <Typography variant="body1" color="error">
+              {errorMessage}
+            </Typography>
+          )}
+          <DonateButton
+            amount={amount}
+            setDonationSuccessful={setDonationSuccessful}
+          />
         </Stack>
       )}
     </form>
-  );  
-
+  );
 }

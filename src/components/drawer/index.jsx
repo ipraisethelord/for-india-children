@@ -15,7 +15,7 @@ import {
   import { DrawerCloseButton } from "../../styles/appbar";
   import { lighten } from "polished";
   import { Colors } from "../../styles/theme";
-  import { NavItems } from "../../data/title";
+  import { NavItems } from "../../data/writtings";
   import { NavLink } from "react-router-dom";
   import { useState } from "react";
   const MiddleDivider = styled((props) => (

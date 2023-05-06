@@ -18,7 +18,7 @@ import Promotions from "../promotions";
 import SearchBox from "../search";
 import Footer from "../footer";
 import Drawer from "../drawer";
-
+import Donate from "../pages/Donate";
 
 function Router() {
     const Layout = () => {
@@ -62,6 +62,7 @@ function Router() {
             <Route path="About" element={<About />} />
             <Route path="Faq" element={<Faq />} />
             <Route path="Projects" element={<Projects />} />
+            <Route path="Donate" element={<Donate />} />
             <Route path="Contact" element={<Contact />} />
             <Route path="Category" element={<CategoryDetail />} />
             <Route path="Category/:id" element={<CategoryDetail />} />

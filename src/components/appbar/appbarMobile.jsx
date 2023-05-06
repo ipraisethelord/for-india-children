@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Actions from "./actions";
 import { IconButton } from "@mui/material";
 import { useUIContext } from "../../context/ui";
-import Title from "../../data/title";
+import Title from "../../data/writtings";
 export default function AppbarMobile({ matches }) {
   const { setDrawerOpen, setShowSearchBox } = useUIContext();
   return (

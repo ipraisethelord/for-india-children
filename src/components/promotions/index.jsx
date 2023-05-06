@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import { useEffect, useRef, useState } from "react";
 import { MessageText, PromotionsContainer } from "../../styles/promotions";
 import { Colors } from "../../styles/theme";
-import {messages} from "../../data/title";
+import {messages} from "../../data/writtings";
 
 // const messages = [
 //   "No matter how small or large, every donation counts!",

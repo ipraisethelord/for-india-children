@@ -24,7 +24,7 @@ import {
   import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
   import Actions from "./actions";
   import { useUIContext } from "../../context/ui";
-  import Title, {ThemeVerse, NavItems} from "../../data/title";
+  import Title, {ThemeVerse, NavItems} from "../../data/writtings";
   import { NavLink } from "react-router-dom";
   import { lighten } from "polished";
   //import Logo from "/public/logo.png";

@@ -13,6 +13,7 @@ import DonateForm from "../papalDonate/donateForm";
 import PayPalAppDonate from "../donateNew/paypal-app-donate";
 import PaypalDonateApp from "../donateClass/donatePayPal";
 import DonateApp from "../donatePapal";
+import DonatePaypalApp from "../donateNew/donateFunction";
 function About() {
   return (
  
@@ -31,6 +32,8 @@ We believe that every child deserves the opportunity to reach their full potenti
       <DonateApp />
       {/* <PayPalAppDonate /> */}
       {/* <PaypalDonateApp /> the error is actions is not defined */}
+
+      <DonatePaypalApp />
     </Stack>
 
    </Box>

@@ -11,7 +11,7 @@ const Background = ({ children }) => {
         minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         padding: 4,
       }}
     >

@@ -23,15 +23,15 @@ import Donate from "../pages/Donate";
 function Router() {
     const Layout = () => {
           return (
-            <>
+            <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
             <Appbar />
-            <Outlet /> {/****this is the container of each page such as about, faq, project */}
+            <Outlet  style={{ flexGrow: 1, alignItems: 'flex-start' }}/> {/****this is the container of each page such as about, faq, project */}
                  
                     {/* <SearchBox /> */}
                    
                    <Footer /> 
                     <Drawer />
-            </>
+            </div>
           )
 
     }

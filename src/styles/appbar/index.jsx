@@ -10,7 +10,9 @@ export const AppbarContainer = styled(Box)(() => ({
     marginTop: 4,
     justifyContent: 'center',
   alignItems: 'center',
-    padding: '2px 8px'
+    padding: '2px 8px',
+    boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)', // Add this line
+
 }));
 
 export const AppbarHeader = styled(Typography)(() => ({

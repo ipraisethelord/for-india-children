@@ -8,38 +8,33 @@ import {
   BannerDescription,
   BannerImage,
 } from "../../styles/banner";
-// import DonateButton from "../donate-paypal";
-// import DonateButton from "../donatePaypalSite";
- import DonateModal from "../donate/donateModal";
-import DonatePaypalSite from "../donate/donatePaypalSite";
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 export default function Banner() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
  
 
   return (
-    <BannerContainer>
+    <BannerContainer alignItems={"flex-start"}>
      
       <BannerImage src="/images/banner/1banner.png" />
   
-      <BannerContent>
-        <Typography variant="h6">
+      <BannerContent sx={{paddingTop:0}}>
+        <Typography variant="h5">
           Make a difference with your gifts!
         </Typography>
-        <Typography variant="h4" gutterBottom>
-          Any help counts!
+        <Typography variant="h3" >
+        Together, we can do it!
         </Typography>
         {/* Any help is a help! */}
         <BannerDescription variant="subtitle">
-          Your generous giving can help us complete the Baptist Academy CBSE
-          school. No matter how small or large, every donation counts! With your
-          support, we can unlock the limitless potential of these students and
-          make a lasting difference.
+        We need to raise half a million dollars to complete the Baptist Academy CBSE school building that will be home to 750 students. With 30 classrooms, two computer labs, a dining area, two school buses, and a basketball court, the school will provide a great educational environment for students. It will also have a security wall and a well with a water treatment plant to ensure the students' safety and health. Your donation will directly contribute to building this school, which will have a significant impact on the children's lives. The cost of building the school is lower in India, and a small donation from you can make a huge difference. The school will be self-supporting through tuition fees and will give many children the opportunity to break the cycle of poverty and build a better future. We promise complete financial transparency, with no money going to management or organizers. Every penny you donate will go towards the benefit of the children. 
         </BannerDescription>
-        <DonateModal /> 
-        {/* <DonateButton /> */}
-     {/* <DonateButton /> */}
-     <DonatePaypalSite />
+        <Button component={Link} to="/donate" variant="contained" color="primary" sx={{color:"white", fontWeight:"bold", fontSize:18}}>Doante Now</Button>
+         
+         
+     
       </BannerContent>
     </BannerContainer>
   );

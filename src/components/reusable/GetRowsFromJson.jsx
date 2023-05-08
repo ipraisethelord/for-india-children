@@ -5,18 +5,18 @@ import Transportation from "../../assets/data/transportation.json";
 
 const GetRowsfromJson = (category) => {
   let rows = [];
-
-  if (category === 'classroom') {
+console.log(category.toLowerCase());
+  if (category.toLowerCase().startsWith("classroom")) {
     rows = Classroom.map((i) => {
       const { id, item, price, quantity, total } = i;
       return { id, item, price, quantity, total };
     });
-  } else if (category === 'lab') {
+  } else if (category.toLowerCase().startsWith("lab")) {
     rows = Lab.map((i) => {
       const { id, item, price, quantity, total } = i;
       return { id, item, price, quantity, total };
     });
-  } else if (category === 'transportation') {
+  } else if (category.toLowerCase().startsWith("school bus")) {
     rows = Transportation.map((i) => {
       const { id, item, price, quantity, total } = i;
       return { id, item, price, quantity, total };

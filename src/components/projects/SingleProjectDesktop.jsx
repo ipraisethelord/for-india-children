@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
 
   Project,
@@ -16,32 +16,35 @@ import FitScreenIcon from "@mui/icons-material/FitScreen";
 import useDialogModal from "../../hooks/useDialogModal";
 import ProjectDetail from "../projectdetail";
 import ProjectMeta from "./ProjectMeta";
-
+import Link from '@mui/material/Link';
+import Colors from "../../styles/theme";
+import { important } from "polished";
+import Tip from "../../styles/project";
 export default function SingleProjectDesktop({ project, matches }) {
   
   const [ProjectDetailDialog, showProjectDetailDialog, closeProjectDialog] =
     useDialogModal(ProjectDetail);
-
+   
   const [showOptions, setShowOptions] = useState(false);
+  
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (e) => {
     setShowOptions(true);
-    
+   
   };
   const handleMouseLeave = () => {
     setShowOptions(false);
+    
   };
   return (
     <>
-      <Project onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <Project onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
         <ProjectImage src={project.image} />
-        {/* <ProjectFavButton isfav={0}>
-          <FavoriteIcon />
-        </ProjectFavButton> */}
-         {/* !! make showOptions to be bollean  */}
         {(showOptions || matches) && (
-          <ProjectToDonate  show={showOptions} variant="contained"> 
-            DONATE
+            
+          <ProjectToDonate  show={showOptions} variant="contained">  
+          <Link href="/Donate" underline="none" color="inherit">     
+            Donate  </Link>         
           </ProjectToDonate >
         )}
        
@@ -52,10 +55,12 @@ export default function SingleProjectDesktop({ project, matches }) {
                 <ShareIcon color="primary" />
               </Tooltip>
             </ProjectActionButton>
-            <ProjectActionButton onClick={() => showProjectDetailDialog()}>
-              <Tooltip placement="left" title="View Detail">
-                <FitScreenIcon color="primary" />
-              </Tooltip>
+            {/* <Typography variant="body2" sx={{ backgroundColor: `${Colors.primary} !important`,color: `${Colors.white} !important`, }} >View Detail</Typography> */}
+            <Tip variant="body2">View Detail</Tip>
+            <ProjectActionButton onClick={() => showProjectDetailDialog()}  >
+             
+            <FitScreenIcon color="primary" />
+             
             </ProjectActionButton>
           </Stack>
         </ProjectActionsWrapper>

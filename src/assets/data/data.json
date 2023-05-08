@@ -2,7 +2,7 @@
 	{"id": 1,
     "name": "building",
     "image": "/images/itemImages/schoolBuilding.jpg",
-	  "total": "$263,750.00",
+	  "total": "263750.00",
       "description": "The Baptist Academy CBSE school is in a critical situation as it urgently requires funding to complete construction. Although the construction is halfway done, the work has come to a halt due to a lack of funds. The existing progress will be wasted without additional funding. Your generous donation can help to complete the Baptist Academy CBSE school and provide a brighter future for young learners in India. Please consider making a contribution today.",
 	"items": 
 	[
@@ -10,136 +10,136 @@
                 "id": "1",
                 "item": "Roof with glass panel finish",
                 "image": "../../assets/itemImages/deskAndChair.jpg",
-                "price": "$10,000.00",
+               "price": "10000.00",
                 "quantity": "1",
-                "total": "$10,000.00"
+                "total": "10000.00"
             },
             {
                 "id": "2",
                 "item": "Floor 25000 sqft, polishing and finishing",
                 "image": "../../assets/itemImages/computerLab.jpg",
-                "price": "$9,375.00",
+               "price": "9375.00",
                 "quantity": "1",
-                "total": "$9,375.00"
+                "total": "9375.00"
             },
             {
                 "id": "3",
                 "item": "Labor for roof",
                 "image": "../../assets/itemImages/physicsLab.jpg",
-                "price": "$6,250.00",
+               "price": "6250.00",
                 "quantity": "1",
-                "total": "$6,250.00"
+                "total": "6250.00"
             },
             {
                 "id": "4",
                 "item": "School security wall, length 500 feet",
                 "image": "../../assets/itemImages/chemistryLab.jpg",
-                "price": "$5,000.00",
+               "price": "5000.00",
                 "quantity": "1",
-                "total": "$5,000.00"
+                "total": "5000.00"
             },
             {
                 "id": "5",
                 "item": "Wall Gates",
                 "image": "../../assets/itemImages/bioLab.jpg",
-                "price": "$1,250.00",
+               "price": "1250.00",
                 "quantity": "2",
-                "total": "$2,500.00"
+                "total": "2500.00"
             },
             {
                 "id": "6",
                 "item": "School Lard Landscaping",
                 "image": "../../assets/itemImages/compositeLab.jpg",
-                "price": "$10,000.00",
+               "price": "10000.00",
                 "quantity": "1",
-                "total": "$10,000.00"
+                "total": "10000.00"
             },
             {
                 "id": "7",
                 "item": "Exit road and paving 25000 sqft",
                 "image": "../../assets/itemImages/library.jpg",
-                "price": "$16,250.00",
+               "price": "16250.00",
                 "quantity": "1",
-                "total": "$16,250.00"
+                "total": "16250.00"
             },
             {
                 "id": "8",
                 "item": "Weather proof materials for building (15000 sqft)",
                 "image": "../../assets/itemImages/library.jpg",
-                "price": "$37,500.00",
+               "price": "37500.00",
                 "quantity": "1",
-                "total": "$37,500.00"
+                "total": "37500.00"
             },
             {
                 "id": "9",
                 "item": "Visitor bathrooms",
                 "image": "../../assets/itemImages/deskAndChair.jpg",
-                "price": "$10,000.00",
+               "price": "10000.00",
                 "quantity": "1",
-                "total": "$10,000.00"
+                "total": "10000.00"
             },
             {
                 "id": "10",
                 "item": "Well Water system",
                 "image": "../../assets/itemImages/computerLab.jpg",
-                "price": "$3,125.00",
+               "price": "3,125.00",
                 "quantity": "1",
-                "total": "$3,125.00"
+                "total": "3,125.00"
             },
             {
                 "id": "11",
                 "item": "water soften system",
                 "image": "../../assets/itemImages/physicsLab.jpg",
-                "price": "$7,500.00",
+               "price": "7500.00",
                 "quantity": "1",
-                "total": "$7,500.00"
+                "total": "7500.00"
             },
             {
                 "id": "12",
                 "item": "Electricity, Light and Power System",
                 "image": "../../assets/itemImages/chemistryLab.jpg",
-                "price": "$40,000.00",
+               "price": "40000.00",
                 "quantity": "1",
-                "total": "$40,000.00"
+                "total": "40000.00"
             },
             {
                 "id": "13",
                 "item": "Sewage treatment plant",
                 "image": "../../assets/itemImages/bioLab.jpg",
-                "price": "$31,250.00",
+               "price": "31250.00",
                 "quantity": "1",
-                "total": "$31,250.00"
+                "total": "31250.00"
             },
             {
                 "id": "14",
                 "item": "Painting",
                 "image": "../../assets/itemImages/compositeLab.jpg",
-                "price": "$18,750.00",
+               "price": "18750.00",
                 "quantity": "1",
-                "total": "$18,750.00"
+                "total": "18750.00"
             },
             {
                 "id": "15",
                 "item": "Shed for bikes and parking place",
                 "image": "../../assets/itemImages/library.jpg",
-                "price": "$18,750.00",
+               "price": "18750.00",
                 "quantity": "1",
-                "total": "$18,750.00"
+                "total": "18750.00"
             },
             {
                 "id": "16",
                 "item": "basketball court Simple roof, basketball and badminton court floors",
                 "image": "../../assets/itemImages/library.jpg",
-                "price": "$37,500.00",
+               "price": "37500.00",
                 "quantity": "1",
-                "total": "$37,500.00"
+                "total": "37500.00"
             }
         ]
 	},
 	{"id": 2,
     "name": "classroom",
     "image": "/images/itemImages/classroom.jpg",
-	 "total": "$67,010.00",
+	 "total": "67010.00",
      "description": "The classrooms project includes interior finishing, providing the students with desks and chairs, and the teachers with offices, computers, and sound systems. Without these necessary furnishings, the school cannot effectively hold classes, which is detrimental to the education and development of the students. Your donation will not only help to complete the construction of the school building, but it will also provide the necessary resources to make sure that students receive a quality education.",
 
 	"items": 
@@ -148,200 +148,200 @@
         "id": "1",
         "item": "Stainless steel dining table",
         "image": "../../assets/itemImages/deskAndChair.jpg",
-        "price": "$625.00",
+       "price": "625.00",
         "quantity": "20",
-        "total": "$12,500.00"
+        "total": "12500.00"
     },
     {
         "id": "2",
         "item": "Stainless Steel handwashing sink unit",
         "image": "../../assets/itemImages/computerLab.jpg",
-        "price": "$120.00",
+       "price": "120.00",
         "quantity": "2",
-        "total": "$240.00"
+        "total": "240.00"
     },
     {
         "id": "3",
         "item": "Cafeteria 2 doors",
         "image": "../../assets/itemImages/physicsLab.jpg",
-        "price": "$125.00",
+       "price": "125.00",
         "quantity": "2",
-        "total": "$250.00"
+        "total": "250.00"
     },
     {
         "id": "4",
         "item": "Glass partition",
         "image": "../../assets/itemImages/chemistryLab.jpg",
-        "price": "$750.00",
+       "price": "750.00",
         "quantity": "1",
-        "total": "$750.00"
+        "total": "750.00"
     },
     {
         "id": "5",
         "item": "Ceiling fan",
         "image": "../../assets/itemImages/bioLab.jpg",
-        "price": "$375.00",
+       "price": "375.00",
         "quantity": "10",
-        "total": "$3,750.00"
+        "total": "3750.00"
     },
     {
         "id": "6",
         "item": "Sliding windows",
         "image": "../../assets/itemImages/compositeLab.jpg",
-        "price": "$200.00",
+       "price": "200.00",
         "quantity": "50",
-        "total": "$10,000.00"
+        "total": "10000.00"
     },
     {
         "id": "7",
         "item": "Stainless handrail(250 feet, 50 feet height)",
         "image": "../../assets/itemImages/library.jpg",
-        "price": "$4,060.00",
+       "price": "4060.00",
         "quantity": "1",
-        "total": "$4,060.00"
+        "total": "4060.00"
     },
     {
         "id": "8",
         "item": "desk with chair",
         "image": "../../assets/itemImages/library.jpg",
-        "price": "$81.00",
+       "price": "81.00",
         "quantity": "25",
-        "total": "$2,025.00"
+        "total": "2025.00"
     },
     {
         "id": "9",
         "item": "Teacher’s desk and chair ",
         "image": "../../assets/itemImages/deskAndChair.jpg",
-        "price": "$200.00",
+       "price": "200.00",
         "quantity": "24",
-        "total": "$4,800.00"
+        "total": "4800.00"
     },
     {
         "id": "10",
         "item": "Classroom white board",
         "image": "../../assets/itemImages/computerLab.jpg",
-        "price": "$35.00",
+       "price": "35.00",
         "quantity": "24",
-        "total": "$840.00"
+        "total": "840.00"
     },
     {
         "id": "11",
         "item": "Interactive white board panel(hopefully have it in all classroom)",
         "image": "../../assets/itemImages/physicsLab.jpg",
-        "price": "$1,875.00",
+       "price": "1875.00",
         "quantity": "5",
-        "total": "$9,375.00"
+        "total": "9375.00"
     },
     {
         "id": "12",
         "item": "student backpack storage shelf",
         "image": "../../assets/itemImages/chemistryLab.jpg",
-        "price": "$330.00",
+       "price": "330.00",
         "quantity": "24",
-        "total": "$7,920.00"
+        "total": "7920.00"
     },
     {
         "id": "13",
         "item": "Labor to lay floor (8000 square foot)",
         "image": "../../assets/itemImages/bioLab.jpg",
-        "price": "$6,000.00",
+       "price": "6000.00",
         "quantity": "1",
-        "total": "$6,000.00"
+        "total": "6000.00"
     },
     {
         "id": "14",
         "item": "Assembly Hall Sound System",
         "image": "../../assets/itemImages/compositeLab.jpg",
-        "price": "$2,000.00",
+       "price": "2000.00",
         "quantity": "1",
-        "total": "$2,000.00"
+        "total": "2000.00"
     },
     {
         "id": "15",
         "item": "Office Desk",
         "image": "../../assets/itemImages/library.jpg",
-        "price": "$125.00",
+       "price": "125.00",
         "quantity": "5",
-        "total": "$625.00"
+        "total": "625.00"
     },
     {
         "id": "16",
         "item": "Computers for office",
         "image": "../../assets/itemImages/library.jpg",
-        "price": "$375.00",
+       "price": "375.00",
         "quantity": "5",
-        "total": "$1,875.00"
+        "total": "1875.00"
     }
 ]
 	},
 	{"id": 3,
-    "name": "lab_library",
+    "name": "lab",
     "image": "/images/itemImages/lab.jpg",
-	 "total": "$45,000.00",
+	 "total": "45000.00",
      "description": "A library, computer lab, and science labs are critical for students to learn and excel in their studies. The library will provide students with access to a vast collection of books, while the computer lab will enable them to learn and keep up with technological advancements. The science lab is essential for students to conduct experiments and understand scientific concepts. These facilities will give students the opportunity to explore, learn, and grow, but they require financial support to be established.",
 	"items": [
     {
         "id": "1",
         "item": "desk with chair  (future may add one more lab)",
         "image": "../../assets/itemImages/deskAndChair.jpg",
-        "price": "$150.00",
+       "price": "150.00",
         "quantity": "25",
-        "total": "$3,750.00"
+        "total": "3750.00"
     },
     {
         "id": "2",
         "item": "Computers for lab",
         "image": "../../assets/itemImages/computerLab.jpg",
-        "price": "$250.00",
+       "price": "250.00",
         "quantity": "25",
-        "total": "$6,250.00"
+        "total": "6250.00"
     },
     {
         "id": "3",
         "item": "Physics Lab",
         "image": "../../assets/itemImages/physicsLab.jpg",
-        "price": "$6,250.00",
+       "price": "6250.00",
         "quantity": "1",
-        "total": "$6,250.00"
+        "total": "6250.00"
     },
     {
         "id": "4",
         "item": "Chemistry Lab",
         "image": "../../assets/itemImages/chemistryLab.jpg",
-        "price": "$6,250.00",
+       "price": "6250.00",
         "quantity": "1",
-        "total": "$6,250.00"
+        "total": "6250.00"
     },
     {
         "id": "5",
         "item": "Biology Lab",
         "image": "../../assets/itemImages/bioLab.jpg",
-        "price": "$6,250.00",
+       "price": "6250.00",
         "quantity": "1",
-        "total": "$6,250.00"
+        "total": "6250.00"
     },
     {
         "id": "6",
         "item": "Composite Lab (for lower grade students)",
         "image": "../../assets/itemImages/compositeLab.jpg",
-        "price": "$6,250.00",
+       "price": "6250.00",
         "quantity": "1",
-        "total": "$6,250.00"
+        "total": "6250.00"
     },
     {
         "id": "7",
         "item": "Library Shelf and desks and chairs",
         "image": "../../assets/itemImages/library.jpg",
-        "price": "$10,000.00",
+       "price": "10000.00",
         "quantity": "1",
-        "total": "$10,000.00"
+        "total": "10000.00"
     }
 ]
 	},
 	{"id": 4,
     "name": "transportation",
     "image": "/images/itemImages/schoolBus.jpg",
-	 "total": "$55,000.00",
+	 "total": "55000.00",
      "description": "The majority of the students' families do not have access to private transportation, and the location of the school has no public transportation options. It is essential for the school to provide safe and reliable transportation for its students.  With the two school buses, students will be able to get to school on time and safely.",
 	"items": 
 	[
@@ -349,9 +349,9 @@
         "id": "1",
         "item": "Bus",
         "image": "../../assets/itemImages/deskAndChair.jpg",
-        "price": "$27,500.00",
+       "price": "27500.00",
         "quantity": "2",
-       "total": "$55,000.00"
+       "total": "55000.00"
     }
 	]
 	}

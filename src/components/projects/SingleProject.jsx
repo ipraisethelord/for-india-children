@@ -16,6 +16,7 @@ import FitScreenIcon from "@mui/icons-material/FitScreen";
 import useDialogModal from "../../hooks/useDialogModal";
 import ProjectDetail from "../projectdetail";
 import ProjectMeta from "./ProjectMeta";
+import Link from '@mui/material/Link';
 
 export default function SingleProject({ project, matches }) {
   const [ProjectDetailDialog, showProjectDetailDialog, closeProjectDialog] =
@@ -36,9 +37,7 @@ export default function SingleProject({ project, matches }) {
         <ProjectMeta project={project} matches={matches} />
         <ProjectActionsWrapper>
           <Stack direction={matches ? "row" : "column"}>
-            {/* <ProjectFavButton isfav={0}>
-              <FavoriteIcon />
-            </ProjectFavButton> */}
+          
             <ProjectActionButton>
               <Tooltip placement="left" title="share this project">
                 <ShareIcon color="primary" />
@@ -52,7 +51,9 @@ export default function SingleProject({ project, matches }) {
           </Stack>
         </ProjectActionsWrapper>
       </Project>
-      <ProjectToDonate variant="contained">Donate</ProjectToDonate>
+      <ProjectToDonate variant="contained"> <Link href="/Donate" underline="none" color="inherit">      
+            Donate    
+          </Link>    </ProjectToDonate>
       <ProjectDetailDialog project={project} />
     </>
   );

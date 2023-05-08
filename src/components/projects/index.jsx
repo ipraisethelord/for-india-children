@@ -10,11 +10,11 @@ export default function Projects() {
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
   const renderProjects = projects.map((project) => (
-    <Grid item key={project.id} xs={6} sm={3} md={3} display="flex" flexDirection={'column'} alignItems="center">
+    <Grid item key={project.name} xs={6} sm={3} md={3} display="flex" flexDirection={'column'} alignItems="center">
       {matches ? (
-        <SingleProject project={project} matches={matches} />
+        <SingleProject project={project} matches={matches} key={project.id} />
       ) : (
-        <SingleProjectDesktop project={project} matches={matches} />
+        <SingleProjectDesktop project={project} matches={matches} key={project.id}/>
       )}
     </Grid>
   ));

@@ -5,6 +5,8 @@ import {
   Box,
   IconButton,
   DialogContent,
+  DialogActions,
+ 
   Typography,
   Button,
   Stack,
@@ -15,7 +17,7 @@ import { Colors } from "../../styles/theme";
 import styled from "@emotion/styled";
 import { ProjectToDonate, Project, ProjectImage } from "../../styles/project";
 import { BannerShopButton } from "../../styles/banner";
-import IncDec from "../ui/incdec";
+//import IncDec from "../ui/incdec";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -23,16 +25,9 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import React from 'react';
-// function SlideTransition(props) {
-//   return (
-//     <Slide direction="down" {...props}>
-//       <Box>{props.children}</Box>
-//     </Slide>
-//   );
-// }
-// this solve this warning
-//Warning: Failed prop type: Invalid prop 'children' supplied to 'Modal'. 
-//Expected an element that can hold a ref. Did you accidentally use a plain function component for an element instead?
+import BasicTable from "../reusable/BasicTable";
+import Link from '@mui/material/Link';
+
 const SlideTransition = React.forwardRef((props, ref) => (
   <Slide direction='down' {...props} ref={ref} />
 ))
@@ -52,13 +47,12 @@ const ProjectDetailInfoWrapper = styled(Box)(() => ({
 export default function ProjectDetail({ open, onClose, project }) {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down("md"));
-  return (
-   
+  return (   
     <Dialog
       TransitionComponent={SlideTransition}
       variant="permanant"
       open={open}
-      fullScreen
+      maxWidth="xl"
     >
       <DialogTitle
         sx={{
@@ -82,15 +76,14 @@ export default function ProjectDetail({ open, onClose, project }) {
             <ProjectImage src={project.image} />
           </Project>
           <ProjectDetailInfoWrapper>
-            <Typography variant="subtitle">SKU: 123</Typography>
-            <Typography variant="subtitle">Availability: 5 in stock</Typography>
+           
             <Typography sx={{ lineHeight: 2 }} variant="h4">
               {project.name}
             </Typography>
             <Typography variant="body">
               {project.description}
-              {project.description}
-              {project.description}
+              {/* {project.description}
+              {project.description} */}
             </Typography>
             <Box
               sx={{ mt: 4 }}
@@ -98,17 +91,12 @@ export default function ProjectDetail({ open, onClose, project }) {
               alignItems="center"
               justifyContent="space-between"
             >
-              <IncDec />
-              <Button variant="contained">Donate</Button>
+             
+              <Link href="/Donate" underline="none">
+              <Button variant="contained" >Donate</Button>
+              </Link>
             </Box>
-            <Box
-              display="flex"
-              alignItems="center"
-              sx={{ mt: 4, color: Colors.light }}
-            >
-              <FavoriteIcon sx={{ mr: 2 }} />
-              Add to wishlist
-            </Box>
+           
             <Box
               sx={{
                 mt: 4,
@@ -121,7 +109,16 @@ export default function ProjectDetail({ open, onClose, project }) {
             </Box>
           </ProjectDetailInfoWrapper>
         </ProjectDetailWrapper>
+              <Typography>Cost Breakdown</Typography>
+          <BasicTable tableName={project.name} />
       </DialogContent>
+      <DialogActions>
+        <Button autoFocus onClick={onClose}>
+          Close
+        </Button>
+       
+      </DialogActions>
+   
     </Dialog>
   );
 }

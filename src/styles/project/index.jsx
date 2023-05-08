@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Button, IconButton } from "@mui/material";
+import { Button, IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { slideInBottom, slideInRight } from "../../animation";
 import { Colors } from "../theme";
@@ -45,6 +45,8 @@ export const ProjectToDonate = styled(Button, {
 })(({ show, theme }) => ({
   width: "120px",
   fontSize: "12px",
+  fontWeight:"bold",
+  color: Colors.white,
   [theme.breakpoints.up("md")]: {
     position: "absolute",    
     bottom: "2%",
@@ -54,15 +56,24 @@ export const ProjectToDonate = styled(Button, {
     `${show &&
       slideInBottom} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
   },
-  background: Colors.secondary,
+ // background: Colors.secondary,
   opacity: 0.9,
   "&:focus": {
     backgroundColor: Colors.primary, // change the color to your desired color
+   // color: Colors.white,
+   
   },
   "&:hover": {
     background: Colors.primary, // change this to your desired color
+    // color: Colors.white,
+    // "& .MuiLink-root": {
+    //   color: Colors.white,
+    // },
+   
   },
 }));
+
+
 
 export const ProjectMetaWrapper = styled(Box)(({theme}) => ({
   padding: 4,
@@ -93,7 +104,16 @@ ProjectActionsWrapper.propTypes = {
 };
 
 
-
+const BlueWhiteTypography = styled(Typography)(({ theme }) => ({
+  backgroundColor: Colors.primary,
+  color: Colors.white,
+  fontSize:9,
+}));
+export default function Tip() {
+  return (
+    <BlueWhiteTypography variant="body2">View Detail</BlueWhiteTypography>
+  );
+}
 
 
 

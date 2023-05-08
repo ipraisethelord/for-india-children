@@ -3,128 +3,128 @@
         "id": "1",
         "item": "Stainless steel dining table",
         "image": "../../assets/itemImages/deskAndChair.jpg",
-        "price": "$625.00",
+       "price": "625.00",
         "quantity": "20",
-        "total": "$12,500.00"
+        "total": "12500.00"
     },
     {
         "id": "2",
         "item": "Stainless Steel handwashing sink unit",
         "image": "../../assets/itemImages/computerLab.jpg",
-        "price": "$120.00",
+       "price": "120.00",
         "quantity": "2",
-        "total": "$240.00"
+        "total": "240.00"
     },
     {
         "id": "3",
         "item": "Cafeteria 2 doors",
         "image": "../../assets/itemImages/physicsLab.jpg",
-        "price": "$125.00",
+       "price": "125.00",
         "quantity": "2",
-        "total": "$250.00"
+        "total": "250.00"
     },
     {
         "id": "4",
         "item": "Glass partition",
         "image": "../../assets/itemImages/chemistryLab.jpg",
-        "price": "$750.00",
+       "price": "750.00",
         "quantity": "1",
-        "total": "$750.00"
+        "total": "750.00"
     },
     {
         "id": "5",
         "item": "Ceiling fan",
         "image": "../../assets/itemImages/bioLab.jpg",
-        "price": "$375.00",
+       "price": "375.00",
         "quantity": "10",
-        "total": "$3,750.00"
+        "total": "3750.00"
     },
     {
         "id": "6",
         "item": "Sliding windows",
         "image": "../../assets/itemImages/compositeLab.jpg",
-        "price": "$200.00",
+       "price": "200.00",
         "quantity": "50",
-        "total": "$10,000.00"
+        "total": "10000.00"
     },
     {
         "id": "7",
         "item": "Stainless handrail(250 feet, 50 feet height)",
         "image": "../../assets/itemImages/library.jpg",
-        "price": "$4,060.00",
+       "price": "4060.00",
         "quantity": "1",
-        "total": "$4,060.00"
+        "total": "4060.00"
     },
     {
         "id": "8",
         "item": "desk with chair",
         "image": "../../assets/itemImages/library.jpg",
-        "price": "$81.00",
+       "price": "81.00",
         "quantity": "25",
-        "total": "$2,025.00"
+        "total": "2025.00"
     },
     {
         "id": "9",
         "item": "Teacher’s desk and chair ",
         "image": "../../assets/itemImages/deskAndChair.jpg",
-        "price": "$200.00",
+       "price": "200.00",
         "quantity": "24",
-        "total": "$4,800.00"
+        "total": "4800.00"
     },
     {
         "id": "10",
         "item": "Classroom white board",
         "image": "../../assets/itemImages/computerLab.jpg",
-        "price": "$35.00",
+       "price": "35.00",
         "quantity": "24",
-        "total": "$840.00"
+        "total": "840.00"
     },
     {
         "id": "11",
         "item": "Interactive white board panel(hopefully have it in all classroom)",
         "image": "../../assets/itemImages/physicsLab.jpg",
-        "price": "$1,875.00",
+       "price": "1875.00",
         "quantity": "5",
-        "total": "$9,375.00"
+        "total": "9375.00"
     },
     {
         "id": "12",
         "item": "student backpack storage shelf",
         "image": "../../assets/itemImages/chemistryLab.jpg",
-        "price": "$330.00",
+       "price": "330.00",
         "quantity": "24",
-        "total": "$7,920.00"
+        "total": "7920.00"
     },
     {
         "id": "13",
         "item": "Labor to lay floor (8000 square foot)",
         "image": "../../assets/itemImages/bioLab.jpg",
-        "price": "$6,000.00",
+       "price": "6000.00",
         "quantity": "1",
-        "total": "$6,000.00"
+        "total": "6000.00"
     },
     {
         "id": "14",
         "item": "Assembly Hall Sound System",
         "image": "../../assets/itemImages/compositeLab.jpg",
-        "price": "$2,000.00",
+       "price": "2000.00",
         "quantity": "1",
-        "total": "$2,000.00"
+        "total": "2000.00"
     },
     {
         "id": "15",
         "item": "Office Desk",
         "image": "../../assets/itemImages/library.jpg",
-        "price": "$125.00",
+       "price": "125.00",
         "quantity": "5",
-        "total": "$625.00"
+        "total": "625.00"
     },
     {
         "id": "16",
         "item": "Computers for office",
         "image": "../../assets/itemImages/library.jpg",
-        "price": "$375.00",
+       "price": "375.00",
         "quantity": "5",
-        "total": "$1,875.00"
+        "total": "1875.00"
     }
 ]

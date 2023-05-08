@@ -3,56 +3,56 @@
         "id": "1",
         "item": "desk with chair  (future may add one more lab)",
         "image": "../../assets/itemImages/deskAndChair.jpg",
-        "price": "$150.00",
+       "price": "150.00",
         "quantity": "25",
-        "total": "$3,750.00"
+        "total": "3750.00"
     },
     {
         "id": "2",
         "item": "Computers for lab",
         "image": "../../assets/itemImages/computerLab.jpg",
-        "price": "$250.00",
+       "price": "250.00",
         "quantity": "25",
-        "total": "$6,250.00"
+        "total": "6250.00"
     },
     {
         "id": "3",
         "item": "Physics Lab",
         "image": "../../assets/itemImages/physicsLab.jpg",
-        "price": "$6,250.00",
+       "price": "6250.00",
         "quantity": "1",
-        "total": "$6,250.00"
+        "total": "6250.00"
     },
     {
         "id": "4",
         "item": "Chemistry Lab",
         "image": "../../assets/itemImages/chemistryLab.jpg",
-        "price": "$6,250.00",
+       "price": "6250.00",
         "quantity": "1",
-        "total": "$6,250.00"
+        "total": "6250.00"
     },
     {
         "id": "5",
         "item": "Biology Lab",
         "image": "../../assets/itemImages/bioLab.jpg",
-        "price": "$6,250.00",
+       "price": "6250.00",
         "quantity": "1",
-        "total": "$6,250.00"
+        "total": "6250.00"
     },
     {
         "id": "6",
         "item": "Composite Lab (for lower grade students)",
         "image": "../../assets/itemImages/compositeLab.jpg",
-        "price": "$6,250.00",
+       "price": "6250.00",
         "quantity": "1",
-        "total": "$6,250.00"
+        "total": "6250.00"
     },
     {
         "id": "7",
         "item": "Library Shelf and desks and chairs",
         "image": "../../assets/itemImages/library.jpg",
-        "price": "$10,000.00",
+       "price": "10000.00",
         "quantity": "1",
-        "total": "$10,000.00"
+        "total": "10000.00"
     }
 ]

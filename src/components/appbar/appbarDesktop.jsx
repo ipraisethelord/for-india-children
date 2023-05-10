@@ -36,16 +36,7 @@ import {
       setSelectedItem(item);
     };
   
-    // const StyledListItemButton = styled(ListItemButton)(({ theme, selected }) => ({
-    //   color: selected ? theme.palette.primary.main : theme.palette.text.primary,
-    //   backgroundColor: selected ? theme.palette.primary.main : "transparent",
-    //   "&:hover": {
-    //     backgroundColor: selected ? theme.palette.primary.main : lighten(0.85, theme.palette.text.primary),
-    //     color: selected ? "#fff" : theme.palette.primary.main
-    //   },
-    //   ...(selected && { "& .MuiListItemText-primary": { fontWeight: theme.typography.fontWeightBold }})
-    // }));
-    
+   
     const StyledListItemButton = styled(ListItemButton)(({ theme, selected }) => ({
       color: selected ? theme.palette.primary.main : theme.palette.text.primary,
       "&.Mui-selected": {

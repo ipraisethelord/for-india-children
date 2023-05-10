@@ -15,7 +15,7 @@ import Projects from "../projects";
 import Appbar from "../appbar";
 import Banner from "../banner";
 import Promotions from "../promotions";
-import SearchBox from "../search";
+
 import Footer from "../footer";
 import Drawer from "../drawer";
 import Donate from "../pages/Donate";
@@ -36,23 +36,7 @@ function Router() {
 
     }
   
-  // const Layout = () => {
-  //   return (
-  //     <>       
-  //       <Container maxWidth={false}>
-  //         <Header />         
-  //         <Box
-  //           direction={{ xs: "column", sm: "row" }}
-  //           sx={{ maxWidth: 'none', minWidth: 'none' }}
-  //         >           
-  //           <Outlet />
-  //         </Box>
-  //       </Container>
-  //       <Footer />
-  //     </>
-  //   );
-
-  // };
+ 
   const BrowserRoutes = () => {
     return (
       <BrowserRouter>
@@ -72,26 +56,6 @@ function Router() {
     );
   };
  
-  // this code shows how to program out the router using createBrowserRouter
-  // const BrowserRoutes = createBrowserRouter([
-  //     {
-  //         path: "/",
-  //         element: <Layout />,
-  //         children: [
-  //             {
-  //                 path: "/",
-  //                 element: <Home />
-  //             },
-  //             {
-  //                 path: "/contact-us",
-  //                 element: <Contact />
-  //             }
-  //         ]
-  //     }
-  // ])
-
-  // add this RouterProvider in the return statement if you plan on using the createBrowserRouter
-  // <RouterProvider router={BrowserRoutes} />
 
   return <BrowserRoutes />;
 }

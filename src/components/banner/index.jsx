@@ -10,12 +10,14 @@ import {
 } from "../../styles/banner";
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import Background from "../background";
 export default function Banner() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
  
 
   return (
+  
     <BannerContainer alignItems={"flex-start"}>
      
       <BannerImage src="/images/banner/1banner.png" />
@@ -37,5 +39,6 @@ export default function Banner() {
      
       </BannerContent>
     </BannerContainer>
+
   );
 }

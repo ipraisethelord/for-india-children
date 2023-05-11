@@ -25,7 +25,11 @@ export default function BannerBox() {
             not know it? I will even make a way in the wilderness, and rivers in
             the desert.
           </Typography>
-          <Typography variant="body1" align="right" sx={{ color: "#333" }}>
+          <Typography
+            variant="body1"
+            align="right"
+            sx={{ color: "#333", marginRight: "15px" }}
+          >
             Isaiah 43:19
           </Typography>
         </Box>

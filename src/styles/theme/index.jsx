@@ -53,7 +53,7 @@ const theme = createTheme({
     },
     MuiTypography: {
       variants: {
-        BannerTypography: {
+        banner: {
           fontFamily: "Nunito, sans-serif",
           color: "#000",
         },

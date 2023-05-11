@@ -1,66 +1,34 @@
 import { Card, Container, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
 import React from "react";
-import ControlledAccordions from "../reusable/FaqAccordian";
-
-import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ArchiveIcon from "@mui/icons-material/Archive";
-import DonateModal from "../reusable/DonateModal";
-import ChildrenImageList from "../reusable/ChildrenImageList";
 import { Colors } from "../../styles/theme";
+ import FaqAccordian from "../reusable/FaqAccordian";
+ import BannerBox from "../reusable/BannerBox";
 export default function Faq() {
-  const [value, setValue] = React.useState(0);
-  return (
-    <Box sx={{ bgcolor: Colors.light_gray, pt:2,pl:10 }} display="flex" minHeight="100vh" flexDirection="column">
-    <Box display="flex" justifyContent="flex-start">
-      
-      <Typography variant="h3" component="h1" marginTop={3}>
-        Immerse into the Falls
-      </Typography>
-     
-      </Box>
-      <Box display="flex" marginTop={3} justifyContent="flex-end">
-      
-      
-        <ChildrenImageList />
-      </Box>
-      <Box display="flex" justifyContent="flex-start">
-      <Typography variant="h6" component="h4" marginTop={3}>
-        About this ticket
-      </Typography>
-      </Box>
-      <Box  display="flex" justifyContent="flex-start">
-        <Typography variant="paragraph" component="p" marginY={3}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
-          voluptates rem quos delectus debitis earum modi, ipsum veritatis.
-          Perferendis officiis nobis, aut hic praesentium nulla vero, possimus
-          omnis reprehenderit blanditiis quis incidunt minima voluptatibus illum
-          quam corporis libero fugiat doloremque. Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Exercitationem officiis commodi beatae
-          animi incidunt necessitatibus aut provident ad ex. Saepe!
-        </Typography>
-      </Box>
-      <Typography variant="h6" component="h4" marginBottom={3}>
-        Frequently Asked Questions
-      </Typography>
-      <ControlledAccordions />
-      <Paper
-        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-        elevation={3}
-      >
-        <BottomNavigation
-          showLabels
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
-        >
-          <DonateModal />
-        </BottomNavigation>
-      </Paper>
-      </Box>
   
+  return (
+  <Box sx={{ bgcolor: Colors.light_gray, }} display="flex" flexDirection="column"> 
+   
+      <Container>
+     
+        <Typography variant="h3" marginTop={3} marginBottom={3}>
+          Frequently Asked Questions
+        </Typography>
+        <Stack display="flex" direction ="row" alignItems="flex-start">
+        <img src="/images/boy-reading.png" alt="boy reading" />
+        <FaqAccordian />
+      
+        </Stack>
+     
+      </Container>
+   
+      </Box>
+
   );
 }
+ {/* 
+
+import ChildrenImageList from "../reusable/ChildrenImageList";
+
+ {/*  */}

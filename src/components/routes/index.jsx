@@ -6,29 +6,21 @@ import Faq from "../pages/Faq";
 import About from "../pages/About";
 import CategoryDetail from "../pages/CategoryDetail";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-// import Container from "@mui/material/Container";
-
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Projects from "../projects";
-
 import Appbar from "../appbar";
-import Banner from "../banner";
-import Promotions from "../promotions";
-
 import Footer from "../footer";
 import Drawer from "../drawer";
 import Donate from "../pages/Donate";
+import BannerBox from "../reusable/BannerBox";
 
 function Router() {
     const Layout = () => {
           return (
             <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
             <Appbar />
+            <BannerBox />
             <Outlet  style={{ flexGrow: 1, alignItems: 'flex-start' }}/> {/****this is the container of each page such as about, faq, project */}
-                 
-                    {/* <SearchBox /> */}
-                   
+                             
                    <Footer /> 
                     <Drawer />
             </div>

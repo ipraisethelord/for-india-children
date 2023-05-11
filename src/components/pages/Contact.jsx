@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import { Colors } from "../../styles/theme";
 import emailjs from '@emailjs/browser';
 import Box from "@mui/material/Box";
-
+import {ContactMessage} from "../../data/writtings";
 function Contact() {
  
   const [toSend, setToSend] = useState({
@@ -18,7 +18,7 @@ function Contact() {
     message: '',
     user_email: '',
   });
-  const [msg, setMsg]= useState("hhh");
+  const [msg, setMsg]= useState(ContactMessage);
   const form = useRef();
  
   const handleChange = (e) => {
@@ -40,13 +40,15 @@ function Contact() {
     <Box display="flex" justifyContent="flex-start">
      <Typography variant="h3">Get in Touch</Typography>
      </Box>
-    <Box display="flex" justifyContent="center">
+    <Box display="flex" justifyContent="center"> 
       <Grid>
-        <Card style={{ maxWidth: 700, padding: "20px 5px", margin: "0 auto" }}>
-          <CardContent >
-            <Typography gutterBottom variant="h5" color="success.main">
-              {msg}
-            </Typography>
+       
+      <Box mt={2} mb={2}>
+  <Typography gutterBottom variant="subtitle" color="#000">
+    {msg}
+  </Typography>
+</Box>
+
           
             <form ref={form} onSubmit={sendEmail}>
               <Grid container spacing={1}>
@@ -126,9 +128,9 @@ function Contact() {
                 </Grid>
               </Grid>
             </form>
-          </CardContent>
-        </Card>
+          
       </Grid>
+      <img src="/images/boy-reading.png" alt="boy reading" />
       </Box>
     </Box>
   );

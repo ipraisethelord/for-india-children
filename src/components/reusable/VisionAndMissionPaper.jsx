@@ -3,18 +3,18 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 
-export deafult function VisionAndMissionPaper({ item, content }) {
+export default function VisionAndMissionPaper({ item, content }) {
   return (
     <Box
       sx={{
-        display: "flex",
-        alignItems: "flex-start",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        "& > :not(style)": {
-          p: 5,
-          width: 330,
-          height: "auto"
+          display: "flex",
+          alignItems: "flex-start",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          "& > :not(style)": {
+            p: 5,
+            width: 400,
+            height: "auto"
         }
       }}
     >

@@ -2,7 +2,7 @@ import { IconButton, List, Typography } from "@mui/material";
 import {styled} from "@mui/material/styles";
 import { Box } from "@mui/system";
 import "@fontsource/montez";
-import { Colors, DrawerWidth } from "../theme";
+import theme, { Colors, DrawerWidth } from "../theme";
 import { textPopUpTop } from "../../animation";
 
 export const AppbarContainer = styled(Box)(() => ({    
@@ -23,6 +23,9 @@ export const AppbarHeader = styled(Typography)(() => ({
   color: Colors.secondary,
   "&:hover": {
     animation: `${textPopUpTop} 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both`,
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "2em",
   },
 }));
 

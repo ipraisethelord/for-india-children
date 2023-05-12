@@ -20,5 +20,5 @@ export const MessageText = styled(Typography)(({ theme }) => ({
     fontSize: "4rem",
   },
   color: Colors.white,
-  fontSize: "3rem",
+  fontSize: "1.5rem",
 }));

@@ -43,7 +43,13 @@ const theme = createTheme({
       light: Colors.success,
     },
   },
-
+  typography: {
+    banner: {
+      fontFamily: "Nunito, sans-serif",
+      color: "#000",
+      textAlign: "left", // or "right"
+    },
+  },
   components: {
     MuiButton: {
       defaultProps: {
@@ -51,14 +57,7 @@ const theme = createTheme({
         disableElevation: true,
       },
     },
-    MuiTypography: {
-      variants: {
-        banner: {
-          fontFamily: "Nunito, sans-serif",
-          color: "#000",
-        },
-      },
-    },
+   
     MuiTooltip: {
       defaultProps: {
         arrow: true,
@@ -91,25 +90,25 @@ const theme = createTheme({
       },
     },
 
-    MyShopButton: {
-      styleOverrides: {
-        root: {
-          color: Colors.white,
-        },
-        primary: {
-          background: Colors.primary,
-          "&:hover": {
-            background: lighten(0.05, Colors.primary),
-          },
-        },
-        secondary: {
-          background: `${Colors.secondary}`,
-          "&:hover": {
-            background: lighten(0.05, Colors.primary),
-          },
-        },
-      },
-    },
+    // MyShopButton: {
+    //   styleOverrides: {
+    //     root: {
+    //       color: Colors.white,
+    //     },
+    //     primary: {
+    //       background: Colors.primary,
+    //       "&:hover": {
+    //         background: lighten(0.05, Colors.primary),
+    //       },
+    //     },
+    //     secondary: {
+    //       background: `${Colors.secondary}`,
+    //       "&:hover": {
+    //         background: lighten(0.05, Colors.primary),
+    //       },
+    //     },
+    //   },
+    //},
   },
 });
 

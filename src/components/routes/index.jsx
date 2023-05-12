@@ -5,7 +5,7 @@ import Contact from "../pages/Contact";
 import Faq from "../pages/Faq";
 import About from "../pages/About";
 import CategoryDetail from "../pages/CategoryDetail";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, useLocation } from "react-router-dom";
 import Projects from "../projects";
 import Appbar from "../appbar";
 import Footer from "../footer";
@@ -14,21 +14,21 @@ import Donate from "../pages/Donate";
 import BannerBox from "../reusable/BannerBox";
 
 function Router() {
-    const Layout = () => {
-          return (
-            <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-            <Appbar />
-            <BannerBox />
-            <Outlet  style={{ flexGrow: 1, alignItems: 'flex-start' }}/> {/****this is the container of each page such as about, faq, project */}
-                             
-                   <Footer /> 
-                    <Drawer />
-            </div>
-          )
+  const Layout = () => {
+    const location = useLocation();
+    const isHomePage = location.pathname === "/" || location.pathname === "/home";
 
-    }
-  
- 
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+        <Appbar />
+        {!isHomePage && <BannerBox />}
+        <Outlet style={{ flexGrow: 1, alignItems: 'flex-start' }} />
+        <Footer />
+        <Drawer />
+      </div>
+    );
+  };
+
   const BrowserRoutes = () => {
     return (
       <BrowserRouter>
@@ -47,8 +47,8 @@ function Router() {
       </BrowserRouter>
     );
   };
- 
 
   return <BrowserRoutes />;
 }
+
 export default Router;

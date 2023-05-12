@@ -7,9 +7,10 @@ export const ThemeVerse =()=> {
         and rivers in the desert.</span>)
 }
 export const messages = [
-    "No matter how small or large, every donation counts!",
+    "Small or large, every donation counts!",
     "Your donation changes lives.",
     "Give a little, help a lot",
+    "You can change life",
   ];
 
 export  const NavItems = ['Home', 'About', 'Faq','Projects', 'Contact'];

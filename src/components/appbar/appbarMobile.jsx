@@ -15,9 +15,7 @@ export default function AppbarMobile({ matches }) {
       <AppbarHeader textAlign={"center"} variant="h4">
         <Title />
       </AppbarHeader>
-      {/* <IconButton onClick={() => setShowSearchBox(true)}>
-        <SearchIcon />
-      </IconButton> */}
+     
       <Actions matches={matches} />
     </AppbarContainer>
   );

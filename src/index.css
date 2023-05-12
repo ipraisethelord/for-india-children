@@ -1,7 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@300&display=swap");
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Nunito", "Roboto", "Segoe UI",
+
+  margin:0;
+ 
+  
+  background: #eee;
+  color: #000000;
+  /* color: #964b00; */
+ 
+  font-family:  "Nunito", "Roboto", "Segoe UI",-apple-system, BlinkMacSystemFont,
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;

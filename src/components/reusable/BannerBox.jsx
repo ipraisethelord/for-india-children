@@ -16,11 +16,21 @@ export default function BannerBox() {
           backgroundColor: theme.palette.secondary.main,
           "&:hover": {
             backgroundColor: theme.palette.primary.main,
+            color: "#fff",
           },
         }}
       >
-        <Box>
-          <Typography variant="banner" align="center">
+        <Box  sx={{
+            "&:hover": {
+              "& h1": {
+                color: "white",
+              },
+              "& p": {
+                color: "white",
+              },
+            },
+          }}>
+          <Typography variant="banner" component="h1" align="left">
             Behold, I will do a new thing; now it shall spring forth; shall ye
             not know it? I will even make a way in the wilderness, and rivers in
             the desert.

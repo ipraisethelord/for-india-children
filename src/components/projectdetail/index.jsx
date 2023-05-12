@@ -16,7 +16,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Colors } from "../../styles/theme";
 import styled from "@emotion/styled";
 import { ProjectToDonate, Project, ProjectImage } from "../../styles/project";
-import { BannerShopButton } from "../../styles/banner";
+
 //import IncDec from "../ui/incdec";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";

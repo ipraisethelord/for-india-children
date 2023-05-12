@@ -4,6 +4,7 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material/styles";
 import theme from "../../styles/theme";
+
 export default function VisionAndMissionPaper({ item, content }) {
   return (
     <Box
@@ -14,17 +15,18 @@ export default function VisionAndMissionPaper({ item, content }) {
         justifyContent: "center",
         "& > :not(style)": {
           p: 5,
-          width: "22rem",
+          width: "300px", // Set width to 300px for mobile devices
           height: "auto",
+          [theme.breakpoints.up("sm")]: {
+            width: "400px", // Set width to 400px for desktop devices and larger
+          },
         },
       }}
     >
-      <Paper elevation={3} sx={{ backgroundColor: alpha("#f0fff0", 0.3) }}>
+      <Paper elevation={3} sx={{ backgroundColor: alpha("#f0fff0", 0.5), textAlign: "center" }}>
         <Typography variant="h2">{item}</Typography>
-        <Typography>{content}</Typography>
+        <Typography align="left">{content}</Typography>
       </Paper>
     </Box>
   );
 }
-
-//      <VisionAndMissionPaper content="This is my world" item="Vision" />

@@ -8,7 +8,10 @@ import Typography from "@mui/material/Typography";
 import { Colors } from "../../styles/theme";
 import emailjs from '@emailjs/browser';
 import Box from "@mui/material/Box";
+import Stack from '@mui/material/Stack';
 import {ContactMessage} from "../../data/writtings";
+import theme from "../../styles/theme";
+import { styled } from "@mui/material";
 function Contact() {
  
   const [toSend, setToSend] = useState({
@@ -35,11 +38,32 @@ function Contact() {
           console.log(error.text);
       });
   };
+  const StyledImage = styled("img")({
+    width: "100%",
+    "@media (maxWidth: 400px)": {
+     maxWidth: "50%",
+    },
+    "@media (maxWidth: 600px)": {
+      maxWidth: "70%",
+    },
+    "@media (minWidth: 960px)": {
+      maxWidth: "80%", 
+    },
+    "@media (minWidth: 1280px)": {
+      minWidth: "100%", 
+    },
+  })  ;
+
   return (
-    <Box sx={{ bgcolor: Colors.light_gray, pt:2,pl:10 }} display="flex" minHeight="100vh" flexDirection="column">
+    <Box sx={{ bgcolor: Colors.light_gray, p:2, backgroundImage: `url("/images/girl-reading.png")`,
+    backgroundSize: "cover",
+    backgroundPosition: "-400px -15px", }} display="flex" flexDirection="column">
+    
     <Box display="flex" justifyContent="flex-start">
      <Typography variant="h3">Get in Touch</Typography>
      </Box>
+    
+    
     <Box display="flex" justifyContent="center"> 
       <Grid>
        
@@ -130,8 +154,10 @@ function Contact() {
             </form>
           
       </Grid>
-      <img src="/images/boy-reading.png" alt="boy reading" />
+    
       </Box>
+   
+     
     </Box>
   );
 }

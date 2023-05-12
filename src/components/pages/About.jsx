@@ -1,51 +1,57 @@
 import React from "react";
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
-
-import Grid  from "@mui/material/Grid";
-import Typography from '@mui/material/Typography';
-import  VisionAndMissionPaper from "../reusable/VisionAndMissionPaper";
+import AboutContent from "../reusable/AboutContent";
+import VisionAndMissionPaper from "../reusable/VisionAndMissionPaper";
 import Goals from "../reusable/Goals.jsx";
-import { VisionContent, MissionContent} from "../../data/writtings";
-
-import { styled } from '@mui/material/styles';
+import GoalContent from "../reusable/GoalContent";
+import { Colors } from "../../styles/theme";
 function About() {
-  const StyledItem = styled(Paper)(({ theme }) => ({
-  
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
- 
- 
-    return (
-      <Box sx={{ width: '100%' }}>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={6}>
-          <Typography>1</Typography>
-          </Grid>
-          <Grid item xs={6}>
-           <VisionAndMissionPaper item="Vision" content="Our vision is to establish a self-sufficient Baptist Academy Group of Schools in a timely manner, ensuring a quality education for generations to come without the need for further funding." />
-          </Grid>
-          <Grid item xs={6}>
-          <Typography>2</Typography>
-          </Grid>
-          <Grid item xs={6}>
-          <VisionAndMissionPaper item="Mission" content="Our mission is to fund the construction of the Baptist Academy Group of Schools, providing exceptional learning environments that equip students with the necessary skills to succeed in life." />
-          </Grid>
-          <Grid item xs={6}>
-         <img src="/images/girl-reading.png" alt="girl reading" />
-          </Grid>
-          <Grid item xs={6}>
-          <Goals />
-          </Grid>
-        </Grid>
+  return (
+    <Box
+      display="flex"
+      flexDirection={{ xs: "column", md: "row" }}
+      alignItems="flex-start"
+      alignContent="center"
+      sx={{
+        bgcolor: Colors.light_gray,
+        width: "100%",
+      }}
+    >
+      <Box
+        id="about"
+        sx={{
+          width: { xs: "100%", md: "70%" },
+          padding: "15px",
+          order: { xs: 2, md: 1 },
+        }}
+      >
+        <AboutContent />
+        <GoalContent />
       </Box>
-    );
-  }
+      <Box
+        id="visionBox"
+        sx={{
+          width: { xs: "100%", md: "28%" },
+          order: { xs: 1, md: 2 },
+          padding: "15px",
+        }}
+      >
+        <Stack id="vision" spacing={3}>
+          <VisionAndMissionPaper
+            item="Vision"
+            content="Our vision is to establish a self-sufficient Baptist Academy Group of Schools in a timely manner, ensuring a quality education for generations to come without the need for further funding."
+          />
+          <VisionAndMissionPaper
+            item="Mission"
+            content="Our mission is to fund the construction of the Baptist Academy Group of Schools, providing exceptional learning environments that equip students with the necessary skills to succeed in life."
+          />
+          <Goals />
+        </Stack>
+      </Box>
+    </Box>
+  );
+}
 
 export default About;
 

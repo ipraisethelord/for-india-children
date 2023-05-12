@@ -22,9 +22,9 @@ export default function Footer() {
       sx={{
         background: Colors.shaft,
         color: Colors.white,
-        p: { xs: 4, md: 10 },
-        pt: 12,
-        pb: 12,
+        p: { xs:2, md: 5 },
+        pt: 6,
+        pb: 6,
         fontSize: { xs: '12px', md: '14px' }
       }}
     >
@@ -44,9 +44,9 @@ export default function Footer() {
               color: Colors.dove_gray,
             }}
           >
-            <FacebookIcon sx={{ mr: 1 }} />
+            {/* <FacebookIcon sx={{ mr: 1 }} />
             <TwitterIcon sx={{ mr: 1 }} />
-            <InstagramIcon />
+            <InstagramIcon /> */}
           </Box>
         </Grid>
         <Grid item md={6} lg={2}>
@@ -57,11 +57,7 @@ export default function Footer() {
                 About Us
               </Typography>
             </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                Order Tracking
-              </Typography>
-            </ListItemText>
+          
             <ListItemText>
               <Typography lineHeight={2} variant="caption2">
                 Privacy &amp; Policy
@@ -74,32 +70,8 @@ export default function Footer() {
             </ListItemText>
           </List>
         </Grid>
-        {/* <Grid item md={6} lg={2}>
-          <FooterTitle variant="body1">my account</FooterTitle>
-          <List>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                Login
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                My Cart
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                My Account
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                Wishlist
-              </Typography>
-            </ListItemText>
-          </List>
-        </Grid> */}
-        <Grid item md={6} lg={4}>
+      
+        {/* <Grid item md={6} lg={4}>
           <FooterTitle variant="body1">newsletter</FooterTitle>
           <Stack>
             <SubscribeTf
@@ -115,7 +87,7 @@ export default function Footer() {
               Subscribe
             </Button>
           </Stack>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
   );

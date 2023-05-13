@@ -32,50 +32,33 @@ function Contact() {
 //this import.meta.env.VITE_KEY fixed process undefined as in process.env.REACT_APP_KEY
     emailjs.sendForm(import.meta.env.VITE_APP_SERVICE_ID, import.meta.env.VITE_APP_TEMPLATE_ID, form.current, import.meta.env.VITE_APP_USER_ID)
       .then((result) => {
-          console.log(result.text);
-          setMsg("Your form has been submitted!")
+          //console.log(result.text);
+          setMsg("Your form has been submitted! We will get back to you as soon as possible.");
+          setToSend( {first_name: '',
+          last_name: '',
+          phone: '',
+          message: '',
+          user_email: '',});
       }, (error) => {
           console.log(error.text);
       });
   };
-  const StyledImage = styled("img")({
-    width: "100%",
-    "@media (maxWidth: 400px)": {
-     maxWidth: "50%",
-    },
-    "@media (maxWidth: 600px)": {
-      maxWidth: "70%",
-    },
-    "@media (minWidth: 960px)": {
-      maxWidth: "80%", 
-    },
-    "@media (minWidth: 1280px)": {
-      minWidth: "100%", 
-    },
-  })  ;
-
+  
   return (
-    <Box sx={{ bgcolor: Colors.light_gray, p:2, backgroundImage: `url("/images/girl-reading.png")`,
-    backgroundSize: "cover",
-    backgroundPosition: "-400px -15px", }} display="flex" flexDirection="column">
-    
+    <Box sx={{ bgcolor: Colors.light_gray,  }} display="flex" height="100vh" flexDirection="column">
+   
     <Box display="flex" justifyContent="flex-start">
-     <Typography variant="h3">Get in Touch</Typography>
+     <Typography variant="h3" padding={2}>Get in Touch</Typography>
      </Box>
-    
-    
-    <Box display="flex" justifyContent="center"> 
-      <Grid>
-       
-      <Box mt={2} mb={2}>
-  <Typography gutterBottom variant="subtitle" color="#000">
-    {msg}
-  </Typography>
-</Box>
-
-          
+     <Box display="flex"  justifyContent="center" ><Typography gutterBottom variant="h6" color="#000" padding={2}>
+              {msg}
+            </Typography></Box>
+   
+            <Box display="flex" justifyContent="center" justifyItems="center" >
+        
             <form ref={form} onSubmit={sendEmail}>
-              <Grid container spacing={1}>
+              <Grid container spacing={1} maxWidth={800} p={5} justifyContent="center" bgcolor="white" >
+                
                 <Grid xs={12} sm={6} item>
                   <TextField
                     placeholder="Enter first name"
@@ -144,7 +127,7 @@ function Contact() {
                   <Button
                     type="submit"
                     variant="contained"
-                    color="primary"
+                    sx={{ color: "white" }}
                     fullWidth
                   >
                     Submit
@@ -153,10 +136,7 @@ function Contact() {
               </Grid>
             </form>
           
-      </Grid>
-    
-      </Box>
-   
+            </Box>
      
     </Box>
   );

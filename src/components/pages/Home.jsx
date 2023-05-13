@@ -9,7 +9,7 @@ import { styled } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import CardCategory from "../reusable/CardCategory.jsx";
-import CardImage from "../reusable/CardImage";
+//import CardImage from "../reusable/CardImage";
 import categoryItems from "../../assets/data/data.json";
 import Banner from "../banner";
 import Promotions from "../promotions";

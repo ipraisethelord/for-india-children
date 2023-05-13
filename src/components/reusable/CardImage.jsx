@@ -38,12 +38,4 @@ export default function CardImage({ id, name, image, total }) {
   );
 }
 
-       {/* {items.map((item) => (
-         
-              <CardImage id={item.id}
-              name={item.name}
-              image={item.image}
-              total ={item.total}
-              key={item.id}
-              />  
-        ))} */}
+     

@@ -1,25 +1,17 @@
-import { useEffect, useState, useRef } from "react";
+import {useState} from "react";
+import CapitalizeFirstLetter from "../reusable/CapitolizeFirstLetter";
 import {
-
   Project,
-  ProjectActionButton,
-  ProjectActionsWrapper,
   ProjectToDonate,
-  // ProjectFavButton,
   ProjectImage,
-  ProjectMetaWrapper,
+
 } from "../../styles/project";
-import { Stack, Tooltip, Typography } from "@mui/material";
-//import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import FitScreenIcon from "@mui/icons-material/FitScreen";
+import Typography  from "@mui/material/Typography";
 import useDialogModal from "../../hooks/useDialogModal";
 import ProjectDetail from "../projectdetail";
-import ProjectMeta from "./ProjectMeta";
 import Link from '@mui/material/Link';
-import Colors from "../../styles/theme";
-import { important } from "polished";
-import Tip from "../../styles/project";
+
+
 export default function SingleProjectDesktop({ project, matches }) {
   
   const [ProjectDetailDialog, showProjectDetailDialog, closeProjectDialog] =
@@ -39,7 +31,7 @@ export default function SingleProjectDesktop({ project, matches }) {
   return (
     <>
       <Project onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-        <ProjectImage src={project.image} />
+        <ProjectImage src={project.image}  onClick={() => showProjectDetailDialog()} />
         {(showOptions || matches) && (
             
           <ProjectToDonate  show={showOptions} variant="contained">  
@@ -48,24 +40,28 @@ export default function SingleProjectDesktop({ project, matches }) {
           </ProjectToDonate >
         )}
        
-        <ProjectActionsWrapper show={(showOptions || matches)}>
-          <Stack direction={matches ? "row" : "column"}>
-            <ProjectActionButton>
-              <Tooltip placement="left" title="share this project">
-                <ShareIcon color="primary" />
-              </Tooltip>
-            </ProjectActionButton>
-            {/* <Typography variant="body2" sx={{ backgroundColor: `${Colors.primary} !important`,color: `${Colors.white} !important`, }} >View Detail</Typography> */}
-            <Tip variant="body2">View Detail</Tip>
-            <ProjectActionButton onClick={() => showProjectDetailDialog()}  >
-             
-            <FitScreenIcon color="primary" />
-             
-            </ProjectActionButton>
-          </Stack>
-        </ProjectActionsWrapper>
+      
       </Project>
-      <ProjectMeta project={project} />
+     
+       <Typography variant={matches ? "body" : "subtitle1"} lineHeight={2} onClick={() => showProjectDetailDialog()}  sx={{
+        cursor: "pointer",
+        "&:hover": {
+          color: '#00a2ff',//Colors.primary, 
+          textDecoration: 'underline',
+        },
+        }}>
+          {CapitalizeFirstLetter(project.name)}
+        </Typography>
+        <Typography variant={matches ? "caption" : "body1"} onClick={() => showProjectDetailDialog()}  sx={{
+        cursor: "pointer",
+        "&:hover": {
+          color: '#00a2ff',//Colors.primary, 
+          textDecoration: 'underline',
+        },
+      }}>
+         ${project.total}
+        </Typography> 
+
       <ProjectDetailDialog project={project} />
     </>
   );

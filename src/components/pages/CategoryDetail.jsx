@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 //import { useContext } from 'react'
 //import Context from '../reusable/Context'
-import BasicTable from "../reusable/BasicTable";
+import BasicTable from "../projects/BasicTable";
 import Box from "@mui/material/Box";
 export default function CategoryDetail() {
   // const userData = useContext(Context)

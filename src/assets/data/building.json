@@ -25,7 +25,7 @@
     },
     {
         "id": "4",
-        "item": "School security wall, length 500 feet",
+        "item": "500 feet school fence",
         "image": "../../assets/itemImages/chemistryLab.jpg",
        "price": "5000.00",
         "quantity": "1",
@@ -81,7 +81,7 @@
     },
     {
         "id": "11",
-        "item": "water soften system",
+        "item": "Water soften system",
         "image": "../../assets/itemImages/physicsLab.jpg",
        "price": "7500.00",
         "quantity": "1",
@@ -121,7 +121,7 @@
     },
     {
         "id": "16",
-        "item": "basketball court Simple roof, basketball and badminton court floors",
+        "item": "Basketball court cover, basketball and badminton court floors",
         "image": "../../assets/itemImages/library.jpg",
        "price": "37500.00",
         "quantity": "1",

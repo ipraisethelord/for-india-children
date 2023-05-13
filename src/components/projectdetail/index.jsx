@@ -25,7 +25,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import React from 'react';
-import BasicTable from "../reusable/BasicTable";
+import BasicTable from "../projects/BasicTable";
 import Link from '@mui/material/Link';
 
 const SlideTransition = React.forwardRef((props, ref) => (
@@ -97,16 +97,7 @@ export default function ProjectDetail({ open, onClose, project }) {
               </Link>
             </Box>
            
-            <Box
-              sx={{
-                mt: 4,
-                color: Colors.dove_gray,
-              }}
-            >
-              <FacebookIcon />
-              <TwitterIcon sx={{ pl: 2 }} />
-              <InstagramIcon sx={{ pl: 2 }} />
-            </Box>
+          
           </ProjectDetailInfoWrapper>
         </ProjectDetailWrapper>
               <Typography>Cost Breakdown</Typography>

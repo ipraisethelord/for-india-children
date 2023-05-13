@@ -1,10 +1,10 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import AboutContent from "../reusable/AboutContent";
-import VisionAndMissionPaper from "../reusable/VisionAndMissionPaper";
-import Goals from "../reusable/Goals.jsx";
-import GoalContent from "../reusable/GoalContent";
+import AboutContent from "./AboutSub/AboutContent";
+import VisionAndMissionPaper from "./AboutSub/VisionAndMissionPaper";
+import Goals from "./AboutSub/Goals.jsx";
+import GoalContent from "./AboutSub/GoalContent";
 import { Colors } from "../../styles/theme";
 function About() {
   return (

@@ -57,7 +57,7 @@
     },
     {
         "id": "8",
-        "item": "desk with chair",
+        "item": "Student desk with chair",
         "image": "../../assets/itemImages/library.jpg",
        "price": "81.00",
         "quantity": "25",
@@ -89,7 +89,7 @@
     },
     {
         "id": "12",
-        "item": "student backpack storage shelf",
+        "item": "Student backpack storage shelf",
         "image": "../../assets/itemImages/chemistryLab.jpg",
        "price": "330.00",
         "quantity": "24",
@@ -126,5 +126,13 @@
        "price": "375.00",
         "quantity": "5",
         "total": "1875.00"
+    },
+	 {
+        "id": "17",
+        "item": "Staff room table with chair",
+        "image": "../../assets/itemImages/library.jpg",
+       "price": "150.00",
+        "quantity": "20",
+        "total": "3000.00"
     }
 ]

@@ -1,10 +1,9 @@
-import { Card, Container, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import React from "react";
 import { Colors } from "../../styles/theme";
-import FaqAccordian from "../reusable/FaqAccordian";
-import theme from "../../styles/theme";
+import FaqAccordian from "./FaqSub/FaqAccordian";
 import { styled } from "@mui/system";
 export default function Faq() {
 

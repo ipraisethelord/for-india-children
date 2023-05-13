@@ -134,12 +134,13 @@
                 "quantity": "1",
                 "total": "37500.00"
             }
+           
         ]
 	},
 	{"id": 2,
     "name": "classroom",
     "image": "/images/itemImages/classroom.jpg",
-	 "total": "67010.00",
+	 "total": "70010.00",
      "description": "The classrooms project includes interior finishing, providing the students with desks and chairs, and the teachers with offices, computers, and sound systems. Without these necessary furnishings, the school cannot effectively hold classes, which is detrimental to the education and development of the students. Your donation will not only help to complete the construction of the school building, but it will also provide the necessary resources to make sure that students receive a quality education.",
 
 	"items": 
@@ -271,6 +272,14 @@
        "price": "375.00",
         "quantity": "5",
         "total": "1875.00"
+    },
+    {
+        "id": "17",
+        "item": "Staff room table with chair",
+        "image": "../../assets/itemImages/library.jpg",
+       "price": "150.00",
+        "quantity": "20",
+        "total": "3000.00"
     }
 ]
 	},

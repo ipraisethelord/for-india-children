@@ -7,12 +7,14 @@ import About from "../pages/About";
 import CategoryDetail from "../pages/CategoryDetail";
 import { BrowserRouter, Routes, Route, Outlet, useLocation } from "react-router-dom";
 import Projects from "../projects";
+import Project from "../pages/Project";
 import Appbar from "../appbar";
 import Footer from "../footer";
 import Drawer from "../drawer";
-import Donate from "../pages/Donate";
+//import Donate from "../pages/Donate";
+import Donate from "../pages/Donate/index";
 import BannerBox from "../reusable/BannerBox";
-
+import Privacy from "../pages/Privacy";
 function Router() {
   const Layout = () => {
     const location = useLocation();
@@ -38,10 +40,13 @@ function Router() {
             <Route path="About" element={<About />} />
             <Route path="Faq" element={<Faq />} />
             <Route path="Projects" element={<Projects />} />
+            <Route path="Project" element={<Project />} />
             <Route path="Donate" element={<Donate />} />
             <Route path="Contact" element={<Contact />} />
+            {/* <Route path="Contact" element={<Donate />} /> */}
             <Route path="Category" element={<CategoryDetail />} />
             <Route path="Category/:id" element={<CategoryDetail />} />
+            <Route path="PrivacyPolicy" element={<Privacy />} />
           </Route>
         </Routes>
       </BrowserRouter>

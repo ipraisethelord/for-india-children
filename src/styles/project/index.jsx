@@ -19,10 +19,12 @@ export const ProjectImage = styled("img")(({ src, theme }) => ({
   src: `url(${src})`,
   width: "100%",
   background: Colors.light_gray,
-  padding: '10px',
+  cursor: "pointer",
+  padding: '0px',
   [theme.breakpoints.down("md")]: {
     width: "80%", 
-    padding: '24px',
+    padding: '1px',
+
   },
 }));
 
@@ -31,14 +33,6 @@ export const ProjectActionButton = styled(IconButton)(() => ({
   margin: 4,
 }));
 
-// export const ProjectFavButton = styled(ProjectActionButton)(({ isfav, theme }) => ({
-//   color: isfav ? Colors.primary : Colors.light,  
-//   [theme.breakpoints.up("md")]: {
-//     position: "absolute",
-//     right: 0,
-//     top: 0,
-//   },
-// }));
 
 export const ProjectToDonate = styled(Button, {
   shouldForwardProp: (prop) => prop !== "show",
@@ -50,7 +44,7 @@ export const ProjectToDonate = styled(Button, {
   [theme.breakpoints.up("md")]: {
     position: "absolute",    
     bottom: "2%",
-    width: "300px",
+    width: "100px",
     padding: "10px 5px",
     animation:
     `${show &&
@@ -59,12 +53,12 @@ export const ProjectToDonate = styled(Button, {
  // background: Colors.secondary,
   opacity: 0.9,
   "&:focus": {
-    backgroundColor: Colors.primary, // change the color to your desired color
+    backgroundColor: Colors.primary, 
    // color: Colors.white,
    
   },
   "&:hover": {
-    background: Colors.primary, // change this to your desired color
+    background: Colors.primary, 
     // color: Colors.white,
     // "& .MuiLink-root": {
     //   color: Colors.white,

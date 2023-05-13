@@ -25,7 +25,7 @@ export default function AlbumCategory() {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+             School Building Project
             </Typography>
             <Typography
               variant="h5"

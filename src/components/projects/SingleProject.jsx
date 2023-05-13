@@ -1,26 +1,22 @@
-import { useEffect, useState } from "react";
-import {
-  
-  Project,
-  ProjectActionButton,
-  ProjectActionsWrapper,
+import { useState } from "react";
+import {  
+  Project, 
   ProjectToDonate,
   //ProjectFavButton,
   ProjectImage,
-  ProjectMetaWrapper,
+ 
 } from "../../styles/project";
-import { Stack, Tooltip, Typography } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import FitScreenIcon from "@mui/icons-material/FitScreen";
+import CapitalizeFirstLetter from "../reusable/CapitolizeFirstLetter";
+import Typography  from "@mui/material/Typography";
+
 import useDialogModal from "../../hooks/useDialogModal";
-import ProjectDetail from "../projectdetail";
-import ProjectMeta from "./ProjectMeta";
+import ProjectDetailMobile from "../projectdetail/ProjectDetailMobile";
 import Link from '@mui/material/Link';
+import { Colors } from "../../styles/theme";
 
 export default function SingleProject({ project, matches }) {
   const [ProjectDetailDialog, showProjectDetailDialog, closeProjectDialog] =
-    useDialogModal(ProjectDetail);
+    useDialogModal(ProjectDetailMobile);
 
   const [showOptions, setShowOptions] = useState(false);
 
@@ -33,23 +29,27 @@ export default function SingleProject({ project, matches }) {
   return (
     <>
       <Project onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <ProjectImage src={project.image} />
-        <ProjectMeta project={project} matches={matches} />
-        <ProjectActionsWrapper>
-          <Stack direction={matches ? "row" : "column"}>
-          
-            <ProjectActionButton>
-              <Tooltip placement="left" title="share this project">
-                <ShareIcon color="primary" />
-              </Tooltip>
-            </ProjectActionButton>
-            <ProjectActionButton onClick={() => showProjectDetailDialog()}>
-              <Tooltip placement="left" title="View Detail">
-                <FitScreenIcon color="primary" />
-              </Tooltip>
-            </ProjectActionButton>
-          </Stack>
-        </ProjectActionsWrapper>
+     
+        <ProjectImage src={project.image} onClick={() => showProjectDetailDialog()} />
+        <Typography variant={matches ? "body" : "subtitle1"} lineHeight={2} onClick={() => showProjectDetailDialog()}  sx={{
+    cursor: "pointer",
+    "&:hover": {
+      color: Colors.primary, 
+      textDecoration: 'underline',
+    },
+  }}>
+          {CapitalizeFirstLetter(project.name)}
+        </Typography>
+        <Typography variant={matches ? "caption" : "body1"} onClick={() => showProjectDetailDialog()}  sx={{
+    cursor: "pointer",
+    "&:hover": {
+     color: Colors.primary, 
+      textDecoration: 'underline',
+    },
+  }}>
+         ${project.total}
+        </Typography> 
+
       </Project>
       <ProjectToDonate variant="contained"> <Link href="/Donate" underline="none" color="inherit">      
             Donate    

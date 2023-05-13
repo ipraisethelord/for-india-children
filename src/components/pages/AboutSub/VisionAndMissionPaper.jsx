@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material/styles";
-import theme from "../../styles/theme";
+import theme from "../../../styles/theme";
 
 export default function VisionAndMissionPaper({ item, content }) {
   return (

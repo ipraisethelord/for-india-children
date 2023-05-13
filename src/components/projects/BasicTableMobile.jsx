@@ -10,8 +10,8 @@ import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import {Colors} from "../../styles/theme";
 import GetRowsfromJson from './GetRowsFromJson';
-
-const BasicTable = ({ tableName }) => {
+import CapitalizeFirstLetter from '../reusable/CapitolizeFirstLetter';
+const BasicTableMobile = ({ tableName }) => {
   const [data, setData] = useState([]);
  
   // Load data from the appropriate JSON file based on the table name
@@ -39,14 +39,13 @@ const BasicTable = ({ tableName }) => {
   return (
    
     <TableContainer component={Paper}>
-      <Table sx={{ maxWidth: 850 }} aria-label="simple table">
+      <Table sx={{ maxWidth: 400 }} aria-label="Detail table">
         <TableHead >
           <TableRow sx={{backgroundColor: Colors.primary}}>
             {/* <TableCell>ID</TableCell> */}
             <TableCell>Item</TableCell>
-            <TableCell>Estimated Unit Price</TableCell>
-            <TableCell>Quantity</TableCell>
-            <TableCell>Total Cost</TableCell>
+            <TableCell>Estimated Cost</TableCell>
+          
           </TableRow>
         </TableHead>
         <TableBody>
@@ -59,16 +58,14 @@ const BasicTable = ({ tableName }) => {
                 {row.id}
               </TableCell> */}
               <TableCell>{row.item}</TableCell>
-              <TableCell>{parseFloat(row.price).toLocaleString('en-US', { style: 'currency', currency: 'USD',minimumFractionDigits: 2,
-  maximumFractionDigits: 2 })}</TableCell>
-              <TableCell>{row.quantity}</TableCell>
-              <TableCell>{parseFloat(row.total).toLocaleString('en-US', { style: 'currency', currency: 'USD',minimumFractionDigits: 2,
-  maximumFractionDigits: 2 })}</TableCell>
+              <TableCell>{parseFloat(row.price).toLocaleString('en-US', { style: 'currency', currency: 'USD',minimumFractionDigits: 0,
+  maximumFractionDigits: 0 })} x {row.quantity} = {parseFloat(row.total).toLocaleString('en-US', { style: 'currency', currency: 'USD',minimumFractionDigits: 0,
+  maximumFractionDigits:0 })}</TableCell>
 
             </StyledTableRow>
           ))}
            <StyledTableRow>
-            <TableCell colSpan={3} align="right">
+            <TableCell>
              Project Total:
             </TableCell>
             <TableCell>{total}</TableCell>
@@ -80,4 +77,4 @@ const BasicTable = ({ tableName }) => {
   );
 };
 
-export default BasicTable;
+export default BasicTableMobile;

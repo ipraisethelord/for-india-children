@@ -5,7 +5,7 @@ import Transportation from "../../assets/data/transportation.json";
 
 const GetRowsfromJson = (category) => {
   let rows = [];
-console.log(category.toLowerCase());
+
   if (category.toLowerCase().startsWith("classroom")) {
     rows = Classroom.map((i) => {
       const { id, item, price, quantity, total } = i;

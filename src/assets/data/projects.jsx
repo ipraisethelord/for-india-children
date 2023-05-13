@@ -9,7 +9,7 @@ export const projects = [
     {
         id: 2,
         name: "Classroom",
-        price: 67010.00,
+        price: 70010.00,
         description: "The classrooms project includes interior finishing, providing the students with desks and chairs, and the teachers with offices, computers, and sound systems. Without these necessary furnishings, the school cannot effectively hold classes, which is detrimental to the education and development of the students. Your donation will not only help to complete the construction of the school building, but it will also provide the necessary resources to make sure that students receive a quality education.",
         image: "/images/projects/classroom.jpg"
     },

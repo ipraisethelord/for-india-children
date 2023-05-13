@@ -15,7 +15,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { SubscribeTf, FooterTitle } from "../../styles/footer";
 import SendIcon from "@mui/icons-material/Send";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <Box
@@ -32,11 +32,7 @@ export default function Footer() {
         <Grid item md={6} lg={4}>
           <FooterTitle variant="body1">About us</FooterTitle>
           <Typography variant="caption2">
-          We are a ministry under the South India Baptist Bible College & Seminary dedicated to educating and 
-          empowering India's children to reach their full potential. Our mission is to create an extraordinary 
-          academic environment that challenges, encourages, and trains towards holistic development.
-           We aim to equip and empower our students for transformational living to impact the world in 
-           a significant way. Join us in our mission to build the Baptist Academy CBSE school by donating now.
+          As an affiliated ministry of the South India Baptist Bible College & Seminary, we are dedicated to educating and empowering the children of India, helping them unlock their full potential. Our unwavering commitment to exemplifying God's love drives us to create an exceptional academic environment that nurtures holistic development. Through our devotion to caring for students, we strive to inspire transformative living and create a meaningful impact in the world.
           </Typography>
           <Box
             sx={{
@@ -63,11 +59,11 @@ export default function Footer() {
                 Privacy &amp; Policy
               </Typography>
             </ListItemText>
-            <ListItemText>
+           <Link to="/PrivacyPolicy"> <ListItemText>
               <Typography lineHeight={2} variant="caption2">
                 Terms &amp; Conditions
               </Typography>
-            </ListItemText>
+            </ListItemText></Link>
           </List>
         </Grid>
       

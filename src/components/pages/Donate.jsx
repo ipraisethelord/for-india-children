@@ -11,7 +11,8 @@ import Stack from "@mui/material/Stack";
 import Background from "../background";
 import DonationCard from "../reusable/donation-card";
 import { Button } from "@mui/material";
-
+import  AlbumChildren from "../reusable/AlbumChildren";
+import Grid from "@mui/material/Grid";
 export default function Donate(e) {
   const handleClick = (e) => {
    
@@ -26,17 +27,18 @@ export default function Donate(e) {
     return (
         <Background>
         
-        <Container maxWidth="lg" >
-          <Box display="flex" justifyContent="center"  alignItems="flex-start">
+       
+          <Stack display="flex" justifyContent="center" alignItems="center" >
+          <Box display="flex" justifyContent="center"  alignItems="center">
             <Stack spacing={4}
-            
+             display="flex"
               // direction={{ xs: "column", sm: "column", md:"row" }}
               justifyContent="center"
-              alignItems="top"
+              alignItems="flex-start"
             >
-              <Box  sx={{paddingTop: 10}}>
+              <Box  sx={{paddingTop: 5}}>
                 {/* <DonateProvider /> */}
-                <Typography variant="subtitle">
+                <Typography variant="h6">
                 The buttons will redirect you to our mission 
                 organization International Partnership Ministries, Inc.'s secure donation link. 
                 To ensure that your donation is allocated to the Baptist Academy project in India, 
@@ -68,7 +70,11 @@ export default function Donate(e) {
               </Box>
             </Stack>
           </Box>
-        </Container>
+          <Box display="flex">
+           < AlbumChildren />
+           </Box>
+        </Stack>
+  
        
       </Background>
     );

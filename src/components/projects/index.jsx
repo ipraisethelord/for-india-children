@@ -1,15 +1,16 @@
 import { Box, Button, Container, Grid } from "@mui/material";
-import { projects } from "../../data";
+import data from '../../assets/data/data.json';
 import SingleProject from "./SingleProject";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import SingleProjectDesktop from "./SingleProjectDesktop";
 
+
 export default function Projects() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
-  const renderProjects = projects.map((project) => (
+  const renderProjects = data.map((project) => (
     <Grid item key={project.name} xs={6} sm={3} md={3} display="flex" flexDirection={'column'} alignItems="center">
       {matches ? (
         <SingleProject project={project} matches={matches} key={project.id} />
@@ -29,6 +30,7 @@ export default function Projects() {
       >
         {renderProjects}
       </Grid>
+    
     </Container>
   );
 }

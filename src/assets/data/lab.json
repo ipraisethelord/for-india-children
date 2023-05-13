@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "item": "desk with chair  (future may add one more lab)",
+        "item": "Desk with chair",
         "image": "../../assets/itemImages/deskAndChair.jpg",
        "price": "150.00",
         "quantity": "25",

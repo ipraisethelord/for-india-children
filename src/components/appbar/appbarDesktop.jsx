@@ -1,93 +1,83 @@
-import {
-  ListItemButton,
-  ListItemText,
-  Button, // Add Button import
-} from "@mui/material";
-import {
-  AppbarContainer,
-  AppbarHeader,
-  MyList,
-} from "../../styles/appbar";
-import { styled } from "@mui/material/styles";
+import { ListItemButton, ListItemText, Button } from "@mui/material";
+import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
 import { useState } from "react";
 import Actions from "./actions";
-import Title, { NavItems } from "../../data/writtings";
+import Title from "../../data/writtings";
 import { NavLink } from "react-router-dom";
-
+import { menu, hasChildren } from "../drawer/menu";
+import Menu from '@mui/material/Menu';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import theme from "../../styles/theme";
+import React from "react";
 export default function AppbarDesktop({ matches }) {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
+  }; 
+
+  const MenuItem = ({ item }) => {
+    const Component = hasChildren(item) ? MultiLevel : SingleLevel;
+    return <Component item={item} />;
   };
 
-  const StyledListItemButton = styled(ListItemButton)(({ theme, selected }) => ({
-    color: selected ? theme.palette.primary.main : theme.palette.text.primary,
-    "&.Mui-selected": {
-      backgroundColor: "transparent",
-    },
-    "&:hover": {
-      backgroundColor: "transparent !important",
-    },
-    ...(selected && { "& .MuiListItemText-primary": { fontWeight: theme.typography.fontWeightBold } })
-  }));
+  const SingleLevel = ({ item }) => {
+    return (<>
+     {item.title !== "Donate" && (
+      <ListItemButton
+        selected={selectedItem === item.title}
+        onClick={() => handleItemClick(item.title)}
+        sx={{ textAlign: "center" }}
+        component={NavLink}
+        to={item.to}
+      >
+    
+  <ListItemText primary={item.title} />
+ 
+      </ListItemButton>
+     )}
+      </>
+    );
+  };
+
+  const MultiLevel = ({ item }) => {
+    const { items: children } = item;
+  
+    return (
+     
+         <PopupState variant="popover" popupId="multi-menu">
+            {(popupState) => (
+              <>
+              <ListItemButton  {...bindTrigger(popupState)} sx={{textAlign:"center", }}>
+              <ListItemText primary={item.title} />
+              </ListItemButton>
+              <Menu  {...bindMenu(popupState)}>
+              {children.map((child, key) => (
+                    <MenuItem key={key} item={child} />
+                  ))}
+
+                
+              </Menu>
+            </>        
+            )}
+          </PopupState>
+     
+    );
+  };
 
   return (
     <AppbarContainer>
       <AppbarHeader variant="h4">
         <Title />
       </AppbarHeader>
-      <MyList type="row">
-        {NavItems.map((item) => (
-          <StyledListItemButton
-            key={item}
-            selected={selectedItem === item}
-            onClick={() => handleItemClick(item)}
-            sx={{ textAlign: "center" }}
-            component={NavLink}
-            to={"/" + (item === "Home" ? "" : item)}
-          >
-            {/* Check if item is "Donate" and render as Button */}
-            {item === "Donate" ? (
-              <Button variant="contained" sx={{ color: 'white', fontWeight: 'bold' }}>
-                <ListItemText primary={item} />
-              </Button>
-            ) : (
-              <ListItemText primary={item} />
-            )}
-            {item === "About" && selectedItem === "About" && (
-              <>
-                <ListItemButton
-                  key={`${item}-History`}
-                  sx={{
-                    textAlign: "center",
-                    paddingLeft: 4,
-                    paddingTop: 1,
-                    paddingBottom: 1,
-                  }}
-                  component={NavLink}
-                  to="/About/History"
-                >
-                  <ListItemText primary="History" />
-                </ListItemButton>
-                <ListItemButton
-                  key={`${item}-MiracleWell`}
-                  sx={{
-                    textAlign: "center",
-                    paddingLeft: 4,
-                    paddingTop: 1,
-                    paddingBottom: 1,
-                  }}
-                  component={NavLink}
-                  to="/About/MiracleWell"
-                >
-                  <ListItemText primary="A Miracle Well" />
-                </ListItemButton>
-              </>
-            )}
-          </StyledListItemButton>
+      <MyList type="row" >
+        {menu.map((item, key) => (
+          <MenuItem key={key} item={item} />
         ))}
-      </MyList>
+      </MyList> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <Button variant="outlined" sx={{ color: theme.palette.primary.main, fontWeight: "bold", 
+      }}>DONATE</Button>
+
       <Actions matches={matches} />
     </AppbarContainer>
   );

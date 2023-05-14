@@ -1,7 +1,6 @@
 export const menu = [
     {     
-      title: "Home",
-     
+      title: "Home",    
       to:"/"
     },
     {

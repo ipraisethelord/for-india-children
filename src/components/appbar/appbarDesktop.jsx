@@ -1,31 +1,18 @@
 import {
-  Box,
-  Divider,
-  List,
-  ListItem,
   ListItemButton,
-  ListItemIcon,
   ListItemText,
-  Stack,
-  Toolbar,
-  Typography,
   Button, // Add Button import
 } from "@mui/material";
-import {   
+import {
   AppbarContainer,
   AppbarHeader,
   MyList,
 } from "../../styles/appbar";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
-import PersonIcon from "@mui/icons-material/Person";
-import SearchIcon from "@mui/icons-material/Search";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Actions from "./actions";
-import { useUIContext } from "../../context/ui";
-import Title, { ThemeVerse, NavItems } from "../../data/writtings";
+import Title, { NavItems } from "../../data/writtings";
 import { NavLink } from "react-router-dom";
-import { lighten } from "polished";
 
 export default function AppbarDesktop({ matches }) {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -42,14 +29,14 @@ export default function AppbarDesktop({ matches }) {
     "&:hover": {
       backgroundColor: "transparent !important",
     },
-    ...(selected && { "& .MuiListItemText-primary": { fontWeight: theme.typography.fontWeightBold }})
+    ...(selected && { "& .MuiListItemText-primary": { fontWeight: theme.typography.fontWeightBold } })
   }));
 
   return (
-    <AppbarContainer>          
+    <AppbarContainer>
       <AppbarHeader variant="h4">
         <Title />
-      </AppbarHeader>       
+      </AppbarHeader>
       <MyList type="row">
         {NavItems.map((item) => (
           <StyledListItemButton
@@ -62,16 +49,46 @@ export default function AppbarDesktop({ matches }) {
           >
             {/* Check if item is "Donate" and render as Button */}
             {item === "Donate" ? (
-              <Button variant="contained" sx={{color:'white', fontWeight: 'bold',}}>
+              <Button variant="contained" sx={{ color: 'white', fontWeight: 'bold' }}>
                 <ListItemText primary={item} />
               </Button>
             ) : (
               <ListItemText primary={item} />
             )}
+            {item === "About" && selectedItem === "About" && (
+              <>
+                <ListItemButton
+                  key={`${item}-History`}
+                  sx={{
+                    textAlign: "center",
+                    paddingLeft: 4,
+                    paddingTop: 1,
+                    paddingBottom: 1,
+                  }}
+                  component={NavLink}
+                  to="/About/History"
+                >
+                  <ListItemText primary="History" />
+                </ListItemButton>
+                <ListItemButton
+                  key={`${item}-MiracleWell`}
+                  sx={{
+                    textAlign: "center",
+                    paddingLeft: 4,
+                    paddingTop: 1,
+                    paddingBottom: 1,
+                  }}
+                  component={NavLink}
+                  to="/About/MiracleWell"
+                >
+                  <ListItemText primary="A Miracle Well" />
+                </ListItemButton>
+              </>
+            )}
           </StyledListItemButton>
         ))}
       </MyList>
-      <Actions matches={matches} />      
+      <Actions matches={matches} />
     </AppbarContainer>
   );
 }

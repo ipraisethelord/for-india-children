@@ -6,6 +6,7 @@ import VisionAndMissionPaper from "./AboutSub/VisionAndMissionPaper";
 import Goals from "./AboutSub/Goals.jsx";
 import GoalContent from "./AboutSub/GoalContent";
 import { Colors } from "../../styles/theme";
+import CoreValues from "./AboutSub/CoreValues";
 function About() {
   return (
     <Box
@@ -44,8 +45,9 @@ function About() {
           />
           <VisionAndMissionPaper
             item="Mission"
-            content="Our mission is to fund the construction of the Baptist Academy Group of Schools, providing exceptional learning environments that equip students with the necessary skills to succeed in life."
+            content="Our mission is to provide exceptional learning environments that equip students with the necessary skills to succeed in life."
           />
+          <CoreValues />
           <Goals />
         </Stack>
       </Box>

@@ -1,15 +1,33 @@
 import Typography from "@mui/material/Typography";
-
+import Box from "@mui/material/Box";
+import useMediaQuery from "@mui/material/useMediaQuery";
 function GoalContent() {
+  
+  const isMediumScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  let boxPadding = 2; 
+  if (isMediumScreen) {
+   
+    boxPadding = 3;   
+  }
+
+  if (isLargeScreen) {
+   
+    boxPadding =4;
+   
+  }
   return (
-    <>
+    <Box padding={boxPadding}>
+      <Typography gutterBottom variant="h4">
+        Fund Raising Goals
+      </Typography>{" "}
       <Typography gutterBottom variant="h5" sx={{ color: "#964b00"}}>
         Phase One - Completing the construction of Baptist Academy CBSE School
       </Typography>{" "}
       &nbsp;
       <Typography gutterBottom>
         The Baptist Academy CBSE school started with 11 students and 2 teachers
-        and has now grown to 175 students from kindergarten to grade 7, with a
+        and has now grown to 185 students (2023 school year) from kindergarten to grade 7, with a
         team of committed and dedicated faculty. We strive to provide a fully
         inclusive CBSE curriculum that empowers and inspires learners with
         powerful knowledge, develops skills, and fosters a love of learning,
@@ -61,7 +79,7 @@ function GoalContent() {
         skills to succeed in life.
       </Typography>{" "}
       &nbsp;
-    </>
+    </Box>
   );
 }
 export default GoalContent;

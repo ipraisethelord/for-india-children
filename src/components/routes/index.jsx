@@ -15,6 +15,8 @@ import Drawer from "../drawer";
 import Donate from "../pages/Donate/index";
 import BannerBox from "../reusable/BannerBox";
 import Privacy from "../pages/Privacy";
+import History  from "../pages/AboutSub/History";
+import Well from "../pages/AboutSub/Well";
 function Router() {
   const Layout = () => {
     const location = useLocation();
@@ -38,14 +40,15 @@ function Router() {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="About" element={<About />} />
+            <Route path="About/History" element={<History />} />
+            <Route path="About/Well" element={<Well />} />
             <Route path="Faq" element={<Faq />} />
             <Route path="Projects" element={<Projects />} />
             <Route path="Project" element={<Project />} />
             <Route path="Donate" element={<Donate />} />
             <Route path="Contact" element={<Contact />} />
             {/* <Route path="Contact" element={<Donate />} /> */}
-            <Route path="Category" element={<CategoryDetail />} />
-            <Route path="Category/:id" element={<CategoryDetail />} />
+         
             <Route path="PrivacyPolicy" element={<Privacy />} />
           </Route>
         </Routes>

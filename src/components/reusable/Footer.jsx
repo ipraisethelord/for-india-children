@@ -1,5 +1,5 @@
 import React from "react";
-import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
+import Paper from "@mui/material/Paper";
 import Copyright from "./Copyright";
 import Typography from "@mui/material/Typography";
 function Footer() {
@@ -9,13 +9,7 @@ function Footer() {
         sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
         elevation={3}
       >
-        {/* <BottomNavigation
-          showLabels
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
-        > */}
+      
            <Typography variant="h6" align="center" gutterBottom>
           Footer
         </Typography>

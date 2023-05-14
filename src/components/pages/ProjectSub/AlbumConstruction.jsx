@@ -7,7 +7,7 @@ import {
     ImageListItemBar,
   
   } from '@mui/material';
-  import ConstructionImageList from '../../reusable/ConstructionImageList';
+  import ConstructionImageList from './ConstructionImageList';
     
   const AlbumConstruction = () => {
    

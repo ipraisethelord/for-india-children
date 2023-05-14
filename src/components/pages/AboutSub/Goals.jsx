@@ -15,7 +15,13 @@ export default function Goals() {
     [lg]: "1.8rem",
     [xl]: "2rem",
   };
-
+  const width = {
+    [xs]: "300px",
+    [sm]: "300px",
+    [md]: "400px",
+    [lg]: "500px",
+    [xl]: "550px",
+  };
   return (
     <Box
       sx={{
@@ -25,7 +31,7 @@ export default function Goals() {
         justifyContent: "center",
         "& > :not(style)": {
           p: 2,
-          maxWidth: 400,
+          width: width,
           height: "auto",
           fontSize: fontSize,
         },

@@ -8,7 +8,7 @@ function Project() {
   return (
     <Stack display="flex">
         <Box  padding={5}>
-    <Typography variant="h4" align="center" padding={5}>Total Funding Needed:<Typography component="span" variant="h4" sx={{ fontWeight: 'bold', color: 'red' }}>
+    <Typography variant="h4" align="center" padding={5}>CBSE School Funding Needed:<Typography component="span" variant="h4" sx={{ fontWeight: 'bold', color: 'red' }}>
     $433,760
   </Typography></Typography>
       <Projects />

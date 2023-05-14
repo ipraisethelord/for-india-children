@@ -17,6 +17,13 @@ import { SubscribeTf, FooterTitle } from "../../styles/footer";
 import SendIcon from "@mui/icons-material/Send";
 import { Link } from "react-router-dom";
 export default function Footer() {
+  const linkStyle = {
+    color: 'white',
+    textDecoration: 'none',
+    '&:hover': {
+      color: '00a2ff',
+    },
+  };
   return (
     <Box
       sx={{
@@ -48,23 +55,31 @@ export default function Footer() {
         <Grid item md={6} lg={2}>
           <FooterTitle variant="body1">information</FooterTitle>
           <List>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                About Us
-              </Typography>
-            </ListItemText>
-          
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                Privacy &amp; Policy
-              </Typography>
-            </ListItemText>
-           <Link to="/PrivacyPolicy"> <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                Terms &amp; Conditions
-              </Typography>
-            </ListItemText></Link>
-          </List>
+  <Link to="/About" style={linkStyle}>
+    <ListItemText>
+      <Typography lineHeight={2} variant="caption2">
+        About Us
+      </Typography>
+    </ListItemText>
+  </Link>
+
+  <Link to="/PrivacyPolicy" style={linkStyle}>
+    <ListItemText>
+      <Typography lineHeight={2} variant="caption2">
+        Privacy &amp; Policy
+      </Typography>
+    </ListItemText>
+  </Link>
+
+  <Link to="/Term" style={linkStyle}>
+    <ListItemText>
+      <Typography lineHeight={2} variant="caption2">
+        Terms &amp; Conditions
+      </Typography>
+    </ListItemText>
+  </Link>
+</List>
+
         </Grid>
       
         {/* <Grid item md={6} lg={4}>

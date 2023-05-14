@@ -1,14 +1,15 @@
 export const menu = [
     {     
       title: "Home",
-      items: []
+     
+      to:"/"
     },
     {
      
       title: "About",
       items: [
         {
-          title: "About",
+          title: "About Us",
           to: "/About"
         },
         {

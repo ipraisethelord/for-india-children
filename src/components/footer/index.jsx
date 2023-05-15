@@ -66,7 +66,9 @@ export default function Footer() {
   
     <ListItemText>
       <Typography lineHeight={2} variant="caption2">
-        Email: <img src="/images/email.png" alt="BuildSchoolTogether.gmail.com" />
+      <span style={{ display: "inline-flex", alignItems: "center" }}>
+      Email: <img src="/images/email.png" alt="BuildSchoolTogether.gmail.com" style={{ marginLeft: "5px" }} />
+    </span>
       </Typography>
     </ListItemText>
   

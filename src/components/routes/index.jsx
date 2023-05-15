@@ -17,6 +17,7 @@ import BannerBox from "../reusable/BannerBox";
 import Privacy from "../pages/Privacy";
 import History  from "../pages/AboutSub/History";
 import Well from "../pages/AboutSub/Well";
+
 function Router() {
   const Layout = () => {
     const location = useLocation();

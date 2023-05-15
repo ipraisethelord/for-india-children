@@ -63,21 +63,21 @@ export default function Footer() {
     </ListItemText>
   </Link>
 
-  <Link to="/PrivacyPolicy" style={linkStyle}>
+  
     <ListItemText>
       <Typography lineHeight={2} variant="caption2">
-        Privacy &amp; Policy
+        Email: <img src="/images/email.png" alt="BuildSchoolTogether.gmail.com" />
       </Typography>
     </ListItemText>
-  </Link>
+  
 
-  <Link to="/Term" style={linkStyle}>
+ 
     <ListItemText>
       <Typography lineHeight={2} variant="caption2">
-        Terms &amp; Conditions
+        Phone: <img src="/images/phone.png" alt="(669) 244 - 2366" />
       </Typography>
     </ListItemText>
-  </Link>
+
 </List>
 
         </Grid>

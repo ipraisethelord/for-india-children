@@ -30,7 +30,7 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 //this import.meta.env.VITE_KEY fixed process undefined as in process.env.REACT_APP_KEY
-    emailjs.sendForm(import.meta.env.VITE_APP_SERVICE_ID, import.meta.env.VITE_APP_TEMPLATE_ID, form.current, import.meta.env.VITE_APP_USER_ID)
+    emailjs.sendForm(import.meta.env.VITE_APP_EMAIL_SERVICE_ID, import.meta.env.VITE_APP_EMAIL_TEMPLATE_ID, form.current, import.meta.env.VITE_APP_EMAIL_USER_ID)
       .then((result) => {
           //console.log(result.text);
           setMsg("Your form has been submitted! We will get back to you as soon as possible.");

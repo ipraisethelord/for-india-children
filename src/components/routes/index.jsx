@@ -46,7 +46,7 @@ function Router() {
             <Route path="Faq" element={<Faq />} />
             <Route path="Projects" element={<Projects />} />
             <Route path="Project" element={<Project />} />
-            <Route path="Donate" element={<Donate />} />
+            <Route path="donate" element={<Donate />} />
             <Route path="Contact" element={<Contact />} />
             {/* <Route path="Contact" element={<Donate />} /> */}
          

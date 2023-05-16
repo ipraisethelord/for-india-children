@@ -92,7 +92,7 @@ export default function ProjectDetail({ open, onClose, project }) {
               justifyContent="space-between"
             >
              
-              <Link href="/Donate" underline="none">
+              <Link href="/donate" underline="none">
               <Button variant="contained" >Donate</Button>
               </Link>
             </Box>

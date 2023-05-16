@@ -51,7 +51,7 @@ export default function SingleProject({ project, matches }) {
         </Typography> 
 
       </Project>
-      <ProjectToDonate variant="contained"> <Link href="/Donate" underline="none" color="inherit">      
+      <ProjectToDonate variant="contained"> <Link href="/donate" underline="none" color="inherit">      
             Donate    
           </Link>    </ProjectToDonate>
       <ProjectDetailDialog project={project} />

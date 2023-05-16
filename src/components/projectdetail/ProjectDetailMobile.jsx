@@ -92,7 +92,7 @@ import {
                 justifyContent="space-between"
               >
                
-                <Link href="/Donate" underline="none">
+                <Link href="/donate" underline="none">
                 <Button variant="contained" >Donate</Button>
                 </Link>
               </Box>

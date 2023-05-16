@@ -90,11 +90,8 @@ import {
                 display="flex"
                 alignItems="center"
                 justifyContent="space-between"
-              >
-               
-                <Link href="/donate" underline="none">
-                <Button variant="contained" >Donate</Button>
-                </Link>
+              >                         
+                <Button component={Link} to="/donate"  variant="contained" >Donate</Button>             
               </Box>
              
              

@@ -45,16 +45,16 @@ function Contact() {
   };
   
   return (
-    <Box sx={{ bgcolor: Colors.light_gray,  }} display="flex" height="100vh" flexDirection="column">
+    <Box sx={{ bgcolor: Colors.light_gray, }} display="flex" height="100vh" flexDirection="column"  >
    
-    <Box display="flex" justifyContent="flex-start">
+    <Box display="flex" justifyContent="flex-start"  >
      <Typography variant="h3" padding={2}>Get in Touch</Typography>
      </Box>
      <Box display="flex"  justifyContent="center" ><Typography gutterBottom variant="h6" color="#000" padding={2}>
               {msg}
             </Typography></Box>
    
-            <Box display="flex" justifyContent="center" justifyItems="center" >
+            <Box display="flex" justifyContent="center" justifyItems="center"  marginBottom={5}>
         
             <form ref={form} onSubmit={sendEmail}>
               <Grid container spacing={1} maxWidth={800} p={5} justifyContent="center" bgcolor="white" >

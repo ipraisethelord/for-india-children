@@ -2,8 +2,7 @@ import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import Faq from "../pages/Faq";
 import About from "../pages/About";
-import CategoryDetail from "../pages/CategoryDetail";
-import { BrowserRouter, Routes, Route, Outlet, useLocation, useHistory, useResolvedPath } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, useLocation } from "react-router-dom";
 import Projects from "../projects";
 import Project from "../pages/Project";
 import Appbar from "../appbar";
@@ -11,9 +10,8 @@ import Footer from "../footer";
 import Drawer from "../drawer";
 import Donate from "../pages/Donate/index";
 import BannerBox from "../reusable/BannerBox";
-import History  from "../pages/AboutSub/History";
+import History from "../pages/AboutSub/History"
 import Well from "../pages/AboutSub/Well";
-
 function Router() {
   const Layout = () => {
     const location = useLocation();
@@ -30,35 +28,22 @@ function Router() {
     );
   };
 
-  const CaseInsensitiveRoute = ({ path, element }) => {
-    const resolvedPath = useResolvedPath(path);
-    const location = useLocation();
-    const history = useHistory();
-
-    const normalizedPath = resolvedPath.pathname.toLowerCase();
-
-    if (location.pathname.toLowerCase() !== normalizedPath) {
-      history.replace(normalizedPath);
-    }
-
-    return <Route path={path} element={element} />;
-  };
-
   const BrowserRoutes = () => {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route path="/" element={<Home />} />
-            <CaseInsensitiveRoute path="/about" element={<About />} />
-            <CaseInsensitiveRoute path="/about/history" element={<History />} />
-            <CaseInsensitiveRoute path="/about/well" element={<Well />} />
-            <CaseInsensitiveRoute path="/faq" element={<Faq />} />
-            <CaseInsensitiveRoute path="/projects" element={<Projects />} />
-            <CaseInsensitiveRoute path="/project" element={<Project />} />
-            <CaseInsensitiveRoute path="/donate" element={<Donate />} />
-            <CaseInsensitiveRoute path="/contact" element={<Contact />} />
-           
+          <Route sensitive={false} path="/" element={<Layout />}>
+            <Route sensitive={false} path="/" element={<Home />} />
+            <Route sensitive={false}  path="about" element={<About />} />
+            <Route sensitive={false}  path="about/history" element={<History />} />
+            <Route sensitive={false}  path="about/well" element={<Well />} />
+            <Route sensitive={false}  path="faq" element={<Faq />} />
+            <Route sensitive={false}  path="projects" element={<Projects />} />
+            <Route sensitive={false}  path="project" element={<Project />} />
+            <Route sensitive={false}  path="donate" element={<Donate />} />
+            <Route sensitive={false} path="contact" element={<Contact />} />
+         
+          
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,9 +1,11 @@
-import { ListItemButton, ListItemText, Button } from "@mui/material";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Button  from "@mui/material/Button";
 import { AppbarContainer, AppbarHeader, MyList } from "../../styles/appbar";
 import { useState } from "react";
 import Actions from "./actions";
 import Title from "../../data/writtings";
-import { NavLink } from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
 import { menu, hasChildren } from "../drawer/menu";
 import Menu from '@mui/material/Menu';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
@@ -32,7 +34,7 @@ export default function AppbarDesktop({ matches }) {
         to={item.to}
       >
     
-  <ListItemText primary={item.title} />
+      <ListItemText primary={item.title} />
  
       </ListItemButton>
      )}
@@ -54,9 +56,7 @@ export default function AppbarDesktop({ matches }) {
               <Menu  {...bindMenu(popupState)}>
               {children.map((child, key) => (
                     <MenuItem key={key} item={child} />
-                  ))}
-
-                
+                  ))}                
               </Menu>
             </>        
             )}
@@ -75,8 +75,9 @@ export default function AppbarDesktop({ matches }) {
           <MenuItem key={key} item={item} />
         ))}
       </MyList> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      <Button variant="outlined" sx={{ color: theme.palette.primary.main, fontWeight: "bold", 
-      }}>DONATE</Button>
+      <Button component={Link} to="/donate" variant="outlined" sx={{ color: theme.palette.primary.main, fontWeight: "bold" }}>
+  DONATE
+</Button>
 
       <Actions matches={matches} />
     </AppbarContainer>

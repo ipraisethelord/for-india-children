@@ -77,7 +77,7 @@ export default function DonationPageDesk(e) {
        {topButton}
         {topCard}
         <Box display="flex" justifyContent="center" justifyItems="center"> <WhyDonateComponent /> </Box>
-       <Typography variant="h4">These Students Needs Your Support!</Typography>
+       <Typography variant="h4"sx={{p:5}}>These Students Needs Your Support!</Typography>
         <AlbumChildren />
       </Stack>
    

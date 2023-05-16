@@ -35,7 +35,7 @@ export default function SingleProjectDesktop({ project, matches }) {
         {(showOptions || matches) && (
             
           <ProjectToDonate  show={showOptions} variant="contained">  
-          <Link href="/Donate" underline="none" color="inherit">     
+          <Link href="/donate" underline="none" color="inherit">     
             Donate  </Link>         
           </ProjectToDonate >
         )}

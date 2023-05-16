@@ -55,7 +55,7 @@ export default function Footer() {
         <Grid item md={6} lg={2}>
           <FooterTitle variant="body1">information</FooterTitle>
           <List>
-  <Link to="/About" style={linkStyle}>
+  <Link to="/about" style={linkStyle}>
     <ListItemText>
       <Typography lineHeight={2} variant="caption2">
         About Us

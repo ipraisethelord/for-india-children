@@ -9,33 +9,33 @@ export const menu = [
       items: [
         {
           title: "About Us",
-          to: "/About"
+          to: "/about"
         },
         {
           title: "History",
-          to: "/About/History"
+          to: "/about/history"
         },
         {
           title: "A Miracle Well",
-          to: "/About/Well"
+          to: "/about/well"
         }
       ]
     },
     {
       title: "Project",
-      to: "/Project"
+      to: "/project"
     },
     {
       
       title: "Faq",
-      to: "/Faq"
+      to: "/faq"
     },
     { 
         title: "Contact",
-        to: "/Contact"
+        to: "/contact"
         },
        { title: "Donate",
-       to: "/Donate"
+       to: "/donate"
     },
   ];
   export function hasChildren(item) {

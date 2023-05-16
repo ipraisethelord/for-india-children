@@ -13,7 +13,7 @@ export const messages = [
     "You can change life",
   ];
 
-export  const NavItems = ['Home', 'About', 'Faq','Project', 'Contact', 'Donate'];
+
 export function DonationMessage() {
     return ("Your generous giving can help us complete the Baptist Academy CBSE school. No matter how small or large, every donation counts! With your support, we can unlock the limitless potential of these students and make a lasting difference.");
 }

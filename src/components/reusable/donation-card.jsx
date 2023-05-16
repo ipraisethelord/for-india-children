@@ -14,11 +14,11 @@ export default function DonationCard() {
   let cardWidth = 300; // Default width for small screens
 
   if (isMediumScreen) {
-    cardWidth = 700;
+    cardWidth = 800;
   }
 
   if (isLargeScreen) {
-    cardWidth = 820;
+    cardWidth = 910;
   }
 
   return (
@@ -27,7 +27,7 @@ export default function DonationCard() {
         component="img"
         alt="unfinished school"
         height="400"
-        image="/images/projects/schoolBuilding.jpg"
+        image="/images/school-building-front.jpg"
       />
       <CardContent style={{ height: 'auto' }}>
         <Typography gutterBottom variant="h5" component="div">

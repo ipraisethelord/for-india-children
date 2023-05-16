@@ -6,7 +6,7 @@ import { useState } from "react";
 import Actions from "./actions";
 import Title from "../../data/writtings";
 import {NavLink, Link} from "react-router-dom";
-import { menu, hasChildren } from "../drawer/menu";
+import { NaviMenu, hasChildren } from "../drawer/navmenu";
 import Menu from '@mui/material/Menu';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import theme from "../../styles/theme";
@@ -71,7 +71,7 @@ export default function AppbarDesktop({ matches }) {
         <Title />
       </AppbarHeader>
       <MyList type="row" >
-        {menu.map((item, key) => (
+        {NaviMenu.map((item, key) => (
           <MenuItem key={key} item={item} />
         ))}
       </MyList> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;

@@ -4,10 +4,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import { DrawerCloseButton } from "../../styles/appbar";
 import { lighten } from "polished";
 import { Colors } from "../../styles/theme";
-import { NavItems } from "../../data/writtings";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { menu, hasChildren } from "./menu";
+import { NaviMenu, hasChildren } from "./navmenu";
 import React from "react";
 import Collapse from "@mui/material/Collapse";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
@@ -84,7 +83,7 @@ export default function AppDrawer() {
       )}
       <Drawer open={drawerOpen}>         
         <List>
-        {menu.map((item, key) => (
+        {NaviMenu.map((item, key) => (
       
         <MenuItem
               selected={selectedItem === item}

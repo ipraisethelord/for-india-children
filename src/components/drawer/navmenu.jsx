@@ -1,4 +1,4 @@
-export const menu = [
+export const NaviMenu = [
     {     
       title: "Home",    
       to:"/"

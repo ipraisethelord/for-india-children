@@ -12,13 +12,15 @@ export default function DonationCard() {
   const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   let cardWidth = 300; // Default width for small screens
-
+ let height=200;
   if (isMediumScreen) {
     cardWidth = 800;
+    height=500;
   }
 
   if (isLargeScreen) {
-    cardWidth = 910;
+    cardWidth = 900;
+    height=600;
   }
 
   return (
@@ -26,7 +28,7 @@ export default function DonationCard() {
       <CardMedia
         component="img"
         alt="unfinished school"
-        height="400"
+        height={height}
         image="/images/school-building-front.jpg"
       />
       <CardContent style={{ height: 'auto' }}>

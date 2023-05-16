@@ -50,7 +50,7 @@ export default function DonationPageMobile(e) {
                         Donate by Paypal
                     </Button>
               </Stack>
-              <Box display="flex">
+              <Box display="flex" mt={2}>
                 <DonationCard />
               </Box>
               <Box display="flex" justifyContent="center" justifyItems="center"> <WhyDonateComponent /> </Box>

@@ -127,7 +127,7 @@ function Contact() {
                   <Button
                     type="submit"
                     variant="contained"
-                    sx={{ color: "white" }}
+                    sx={{color:'white', fontWeight:'bold'}}
                     fullWidth
                   >
                     Submit

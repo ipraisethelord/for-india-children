@@ -1,20 +1,14 @@
-import styled from "@emotion/styled";
 import {
   Grid,
   List,
   ListItemText,
   Typography,
-  Button,
-  Stack,
-  Container,
+
 } from "@mui/material";
 import  Box  from "@mui/material/Box";
 import { Colors } from "../../styles/theme";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import { SubscribeTf, FooterTitle } from "../../styles/footer";
-import SendIcon from "@mui/icons-material/Send";
+import { FooterTitle } from "../../styles/footer";
+
 import { Link } from "react-router-dom";
 export default function Footer() {
   const linkStyle = {
@@ -47,9 +41,7 @@ export default function Footer() {
               color: Colors.dove_gray,
             }}
           >
-            {/* <FacebookIcon sx={{ mr: 1 }} />
-            <TwitterIcon sx={{ mr: 1 }} />
-            <InstagramIcon /> */}
+           
           </Box>
         </Grid>
         <Grid item md={6} lg={2}>

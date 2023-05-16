@@ -9,24 +9,19 @@ import {
  
   Typography,
   Button,
-  Stack,
+
 } from "@mui/material";
-import { useRef } from "react";
+
 import CloseIcon from "@mui/icons-material/Close";
 import { Colors } from "../../styles/theme";
 import styled from "@emotion/styled";
-import { ProjectToDonate, Project, ProjectImage } from "../../styles/project";
+import { Project, ProjectImage } from "../../styles/project";
 
-//import IncDec from "../ui/incdec";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import React from 'react';
 import BasicTable from "../projects/BasicTable";
-import Link from '@mui/material/Link';
+//import Link from "@mui/material/Link";
 
 const SlideTransition = React.forwardRef((props, ref) => (
   <Slide direction='down' {...props} ref={ref} />
@@ -47,6 +42,13 @@ const ProjectDetailInfoWrapper = styled(Box)(() => ({
 export default function ProjectDetail({ open, onClose, project }) {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down("md"));
+    const StyledLink = styled("a")({
+      textDecoration: "none",
+      color: "inherit",
+      "&:hover": {
+        textDecoration: "none",
+      },
+    });
   return (   
     <Dialog
       TransitionComponent={SlideTransition}
@@ -82,8 +84,7 @@ export default function ProjectDetail({ open, onClose, project }) {
             </Typography>
             <Typography variant="body">
               {project.description}
-              {/* {project.description}
-              {project.description} */}
+             
             </Typography>
             <Box
               sx={{ mt: 4 }}
@@ -91,8 +92,7 @@ export default function ProjectDetail({ open, onClose, project }) {
               alignItems="center"
               justifyContent="space-between"
             >                     
-              <Button  component={Link} to="/donate"  variant="contained" >Donate</Button>
-            
+               <Button variant="contained" sx={{color:'white', fontWeight:'bold'}}> <StyledLink href="/donate" underline="none" color="inherit">Donate</StyledLink></Button>       
             </Box>
            
           

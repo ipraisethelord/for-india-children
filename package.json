@@ -1,6 +1,6 @@
 {
   "name": "build-school-together",
-   "homepage": "www.buildschooltogether.org",
+  "homepage": "www.buildschooltogether.org",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -28,7 +28,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-number-format": "^5.1.4",
-    "react-router-dom": "^6.10.0",
+    "react-router-dom": "^6.11.1",
     "rimraf": "^5.0.0",
     "sort-by": "^1.2.0"
   },

@@ -5,29 +5,22 @@ import {
     Box,
     IconButton,
     DialogContent,
-    DialogActions,
-   
+    DialogActions,   
     Typography,
     Button,
-    Stack,
+ 
   } from "@mui/material";
-  import { useRef } from "react";
   import CloseIcon from "@mui/icons-material/Close";
   import { Colors } from "../../styles/theme";
-  import styled from "@emotion/styled";
+
   import { ProjectToDonate, Project, ProjectImage } from "../../styles/project";
-  
-  //import IncDec from "../ui/incdec";
-  import FacebookIcon from "@mui/icons-material/Facebook";
-  import TwitterIcon from "@mui/icons-material/Twitter";
-  import InstagramIcon from "@mui/icons-material/Instagram";
-  import FavoriteIcon from "@mui/icons-material/Favorite";
-  import { useTheme } from "@mui/material/styles";
-  import { useMediaQuery } from "@mui/material";
+
+  import useTheme from "@mui/material/styles/useTheme";
+  import useMediaQuery from "@mui/material/useMediaQuery";
   import React from 'react';
   import BasicTableMobile from "../projects/BasicTableMobile";
-  import Link from '@mui/material/Link';
-  
+  //import Link from "@mui/material/Link";
+  import styled from "@emotion/styled";
   const SlideTransition = React.forwardRef((props, ref) => (
     <Slide direction='down' {...props} ref={ref} />
   ))
@@ -47,6 +40,13 @@ import {
   export default function ProjectDetailMobile({ open, onClose, project }) {
       const theme = useTheme();
       const matches = useMediaQuery(theme.breakpoints.down("md"));
+      const StyledLink = styled("a")({
+        textDecoration: "none",
+        color: "inherit",
+        "&:hover": {
+          textDecoration: "none",
+        },
+      });
     return (   
       <Dialog
         TransitionComponent={SlideTransition}
@@ -81,9 +81,7 @@ import {
                 {project.name}
               </Typography>
               <Typography variant="body">
-                {project.description}
-                {/* {project.description}
-                {project.description} */}
+                {project.description}             
               </Typography>
               <Box
                 sx={{ mt: 4 }}
@@ -91,7 +89,7 @@ import {
                 alignItems="center"
                 justifyContent="space-between"
               >                         
-                <Button component={Link} to="/donate"  variant="contained" >Donate</Button>             
+                <Button variant="contained" sx={{color:'white', fontWeight:'bold'}}><StyledLink href="/donate" underline="none" color="inherit">Donate</StyledLink></Button>         
               </Box>
              
              

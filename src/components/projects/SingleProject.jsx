@@ -11,7 +11,8 @@ import Typography  from "@mui/material/Typography";
 
 import useDialogModal from "../../hooks/useDialogModal";
 import ProjectDetailMobile from "../projectdetail/ProjectDetailMobile";
-import Link from '@mui/material/Link';
+import styled from "@emotion/styled";
+//import Link from "@mui/material/Link";
 import { Colors } from "../../styles/theme";
 
 export default function SingleProject({ project, matches }) {
@@ -26,6 +27,13 @@ export default function SingleProject({ project, matches }) {
   const handleMouseLeave = () => {
     setShowOptions(false);
   };
+  const StyledLink = styled("a")({
+    textDecoration: "none",
+    color: "inherit",
+    "&:hover": {
+      textDecoration: "none",
+    },
+  });
   return (
     <>
       <Project onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
@@ -51,9 +59,9 @@ export default function SingleProject({ project, matches }) {
         </Typography> 
 
       </Project>
-      <ProjectToDonate variant="contained"> <Link to="/donate" underline="none" color="inherit">      
-            Donate    
-          </Link>    </ProjectToDonate>
+      <ProjectToDonate variant="contained" >   
+        <StyledLink href="/donate" underline="none" color="inherit">Donate</StyledLink>       
+      </ProjectToDonate>
       <ProjectDetailDialog project={project} />
     </>
   );

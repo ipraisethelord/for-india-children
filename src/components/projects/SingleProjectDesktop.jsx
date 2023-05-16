@@ -9,8 +9,8 @@ import {
 import Typography  from "@mui/material/Typography";
 import useDialogModal from "../../hooks/useDialogModal";
 import ProjectDetail from "../projectdetail";
-import Link from '@mui/material/Link';
-
+import styled from "@emotion/styled";
+//import Link from "@mui/material/Link";
 
 export default function SingleProjectDesktop({ project, matches }) {
   
@@ -28,16 +28,22 @@ export default function SingleProjectDesktop({ project, matches }) {
     setShowOptions(false);
     
   };
+  const StyledLink = styled("a")({
+    textDecoration: "none",
+    color: "inherit",
+    "&:hover": {
+      textDecoration: "none",
+    },
+  });
   return (
     <>
       <Project onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
         <ProjectImage src={project.image}  onClick={() => showProjectDetailDialog()} />
         {(showOptions || matches) && (
-            
-          <ProjectToDonate  show={showOptions} variant="contained">  
-          <Link to="/donate" underline="none" color="inherit">     
-            Donate  </Link>         
-          </ProjectToDonate >
+        
+          <ProjectToDonate  show={showOptions} variant="contained"  >  
+          <StyledLink href="/donate" underline="none" color="inherit">Donate </StyledLink>                  
+          </ProjectToDonate >  
         )}
        
       

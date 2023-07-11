@@ -1,1 +1,1 @@
-Sitemap: https://www.buildschooltogether/sitemap.txt
+Sitemap: https://www.buildschooltogether/sitemap.xml

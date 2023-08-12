@@ -42,6 +42,9 @@ const theme = createTheme({
       main: Colors.black,
       light: Colors.success,
     },
+    error:{
+      main: Colors.danger,
+    }
   },
   typography: {
     banner: {

@@ -1,11 +1,4 @@
-import {
-  Divider,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  styled,
-} from "@mui/material";
+import {  Divider, Drawer, List, ListItem, ListItemButton,ListItemText, styled,} from "@mui/material";
 import { useUIContext } from "../../context/ui";
 import CloseIcon from "@mui/icons-material/Close";
 import { DrawerCloseButton } from "../../styles/appbar";
@@ -23,9 +16,10 @@ const MiddleDivider = styled((props) => (
   <Divider variant="middle" {...props} />
 ))``;
 
-const StyledListItem = styled(ListItem)(({ theme, selected }) => ({
-  color: selected ? theme.palette.selected.main : "white",
+const StyledListItemButton = styled(ListItemButton)(({ theme, selected }) => ({
+  color: selected ? theme.palette.selected.main: "white",
 }));
+
 
 export default function AppDrawer() {
   const { drawerOpen, setDrawerOpen } = useUIContext();
@@ -33,39 +27,38 @@ export default function AppDrawer() {
   const handleItemClick = (item) => {
     setSelectedItem(item);
   };
-
   const MenuItem = ({ item }) => {
     const Component = hasChildren(item) ? MultiLevel : SingleLevel;
     return <Component item={item} />;
   };
-
+  
   const SingleLevel = ({ item }) => {
     return (
-      <StyledListItem
-        selected={selectedItem === item}
-        onClick={() => handleItemClick(item)}
-        component={NavLink} // Use NavLink component instead of ListItemButton
-        to={item.to}
-      >
-        <ListItemText primary={item.title} />
-      </StyledListItem>
+      <StyledListItemButton
+              selected={selectedItem === item}
+              onClick={() => handleItemClick(item)}
+              component={NavLink}
+              to={item.to}
+            >
+              <ListItemText primary={item.title} />
+            </StyledListItemButton>
     );
   };
-
   const MultiLevel = ({ item }) => {
     const { items: children } = item;
     const [open, setOpen] = useState(false);
-
+  
     const handleClick = () => {
       setOpen((prev) => !prev);
     };
-
+  
     return (
       <>
-        <StyledListItem onClick={handleClick}>
+        <StyledListItemButton onClick={handleClick}>
+         
           <ListItemText primary={item.title} />
           {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        </StyledListItem>
+        </StyledListItemButton>
         <Collapse in={open} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
             {children.map((child, key) => (
@@ -76,8 +69,7 @@ export default function AppDrawer() {
       </>
     );
   };
-
-  return (
+    return (
     <>
       {drawerOpen && (
         <DrawerCloseButton onClick={() => setDrawerOpen(false)}>
@@ -89,18 +81,20 @@ export default function AppDrawer() {
           />
         </DrawerCloseButton>
       )}
-      <Drawer open={drawerOpen}>
+      <Drawer open={drawerOpen}>         
         <List>
-          {NaviMenu.map((item, key) => (
-            <MenuItem
+        {NaviMenu.map((item, key) => (
+      
+        <MenuItem
               selected={selectedItem === item}
               onClick={() => handleItemClick(item)}
-              key={key}
-              item={item}
-            />
-          ))}
+              key={key} item={item}
+           />              
+       
+      ))}     
+          
           <MiddleDivider />
-        </List>
+          </List>
       </Drawer>
     </>
   );

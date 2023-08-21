@@ -22,7 +22,7 @@ export default function Banner() {
   
     <BannerContainer alignItems={"flex-start"}>
      
-      <BannerImage src="/images/banner/main.png" alt="banner"/>
+      <BannerImage src="/images/banner/main.png" />
   
       <BannerContent sx={{paddingTop:0}}>
         <Typography variant="h6">

@@ -26,3 +26,43 @@ function Project() {
 }
 
 export default Project;
+{/* <Box sx={{ display: 'flex', justifyContent: 'center',alignItems:'center',  border: '1px solid red' }}>
+<Grid container spacing={1} rowSpacing={2} sx={{ margin: '0 auto',justifyContent: 'center',alignItems:'center',  border: '1px solid red' }}>
+<Grid item  sm={12} md={6} lg={4}  sx={{ justifyContent: 'right',alignItems:'center',  border: '1px solid red' }}>
+  <MyImageCard name="01" source="/images/underConstruction/01.jpg"/>
+</Grid>
+<Grid item spacing={1}  sm={12} md={6} lg={4}  sx={{ margin: '0 auto',justifyContent: 'center',alignItems:'center',  border: '1px solid red' }}>
+  <MyImageCard name="02" source="/images/underConstruction/02.jpg" />
+</Grid>
+<Grid item  sm={12} md={6} lg={4}  sx={{ margin: '0 auto',justifyContent: 'center',alignItems:'center',  border: '1px solid red' }}>
+  <MyImageCard name="03" source="/images/underConstruction/03.jpg" />
+</Grid>
+<Grid item  sm={12} md={6} lg={4}  sx={{ margin: '0 auto',justifyContent: 'center',alignItems:'center',  border: '1px solid red' }}>
+  <MyImageCard name="04" source="/images/underConstruction/04.jpg" />
+</Grid>
+<Grid item  sm={12} md={6} lg={4}  sx={{ margin: '0 auto',justifyContent: 'center',alignItems:'center',  border: '1px solid red' }}>
+  <MyImageCard name="05" source="/images/underConstruction/05.jpg" />
+</Grid>
+<Grid item  sm={12} md={6} lg={4}>
+  <MyImageCard name="06" source="/images/underConstruction/06.jpg" />
+</Grid>
+<Grid item  sm={12} md={6} lg={4}>
+  <MyImageCard name="07" source="/images/underConstruction/07.jpg" />
+</Grid>
+<Grid item  sm={12} md={6} lg={4}>
+  <MyImageCard name="08" source="/images/underConstruction/08.jpg" />
+</Grid>
+<Grid item  sm={12} md={6} lg={4}>
+  <MyImageCard name="09" source="/images/underConstruction/09.jpg" />
+</Grid>
+<Grid item  sm={12} md={6} lg={4}>
+  <MyImageCard name="10" source="/images/underConstruction/10.jpg" />
+</Grid>
+<Grid item  sm={12} md={6} lg={4}>
+  <MyImageCard name="11" source="/images/underConstruction/11.jpg" />
+</Grid>
+<Grid item  sm={12} md={6} lg={4}>
+  <MyImageCard name="12" source="/images/underConstruction/12.jpg" />
+</Grid>
+</Grid>
+</Box> */}

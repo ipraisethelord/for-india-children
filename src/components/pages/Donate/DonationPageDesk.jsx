@@ -2,24 +2,22 @@ import React from "react";
 import Box from "@mui/material/Box";
 import { Colors } from "../../../styles/theme";
 import Typography from "@mui/material/Typography";
+//import Projects from "../projects";
+//import DonateProvider from "../donatePapal/donate-provider";
 import Stack from "@mui/material/Stack";
-import { Link} from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import DonationCard from "../../reusable/donation-card";
 import { Button } from "@mui/material";
 import  AlbumChildren from "../../reusable/AlbumChildren";
 import WhyDonateComponent from "./WhyDonateUs";
 import { DonateBlurb } from "../../../data/writtings";
-
 export default function DonationPageDesk(e) {
   const handleClick = (e) => {
     if (e.currentTarget.id === "donate") {
       window.location.href = 'https://www.ipmworld.org/donation-form.html';
+    } else {
+      window.location.href = 'https://www.ipmworld.org/general-giving.html';
     }
-    // else {
-    //   //window.location.href = 'https://www.ipmworld.org/general-giving.html';
-    //   window.location.href='donate-paypal';
-    // }
   };
   const isMediumScreen = useMediaQuery((theme) => theme.breakpoints.down("md"));
 
@@ -29,20 +27,16 @@ export default function DonationPageDesk(e) {
   
 
   const linkPaypal = (
-    <Button
-    variant="contained"
-    sx={{
-      width: { xs: "100%", md: 210 },
+    <Button variant="contained" sx={{
+      width: { xs: '100%', md: 210 },
       height: 40,
       color: "white",
-      fontWeight: "bold",
-    }}
-    id="paypal" component={Link} to="/donate-paypal">
-  
+      fontWeight: "bold"
+    }} id="paypal" onClick={handleClick}>
       Donate by Paypal
     </Button>
   );
-   
+
   const linkCredit = (
     <Button variant="contained" sx={{
       width: { xs: '100%', md: 210 },
@@ -57,7 +51,7 @@ export default function DonationPageDesk(e) {
   const buttonsSection = (
     <Stack display="flex"  direction={isMediumScreen ? "column" : "row"} justifyContent="center" alignItems="center">
       <Box m={3}>{linkCredit}</Box>
-      <Box m={3}> {linkPaypal} </Box>
+      <Box m={3}>{linkPaypal}</Box>
     </Stack>
   );
 

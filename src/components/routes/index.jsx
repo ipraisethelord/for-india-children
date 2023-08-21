@@ -12,7 +12,6 @@ import Donate from "../pages/Donate/index";
 import BannerBox from "../reusable/BannerBox";
 import History from "../pages/AboutSub/History"
 import Well from "../pages/AboutSub/Well";
-import DonatePaypal from "../pages/Donate/donate-paypal";
 function Router() {
   const Layout = () => {
     const location = useLocation();
@@ -22,10 +21,7 @@ function Router() {
       <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
         <Appbar />
         {!isHomePage && <BannerBox />}
-     
-        <div style={{ display: "flex", flexDirection: "column", flexGrow: 1, paddingBottom: 60 }}>
-        <Outlet />
-      </div>
+        <Outlet style={{ flexGrow: 1, alignItems: 'flex-start' }} />
         <Footer />
         <Drawer />
       </div>
@@ -45,7 +41,6 @@ function Router() {
             <Route sensitive={false}  path="projects" element={<Projects />} />
             <Route sensitive={false}  path="project" element={<Project />} />
             <Route sensitive={false}  path="donate" element={<Donate />} />
-            <Route sensitive={false} path="donate-paypal" element={<DonatePaypal />} />
             <Route sensitive={false} path="contact" element={<Contact />} />
          
           

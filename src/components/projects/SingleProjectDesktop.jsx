@@ -40,7 +40,7 @@ export default function SingleProjectDesktop({ project, matches }) {
     <>
   
       <Project onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-        <ProjectImage src={project.image}  onClick={() => showProjectDetailDialog()} />
+        <ProjectImage src={project.image}alt="img" onClick={() => showProjectDetailDialog()} />
         {(showOptions || matches) && (
         
           <ProjectToDonate  show={showOptions} variant="contained"  >  

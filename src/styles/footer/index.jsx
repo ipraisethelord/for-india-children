@@ -7,7 +7,7 @@ import { Colors } from "../theme";
 
 export const FooterTitle = styled(Typography)(() => ({
   textTransform: "uppercase",
-  marginBottom: "1em",
+  marginBottom: "0.1em",
 }));
 
 export const SubscribeTf = styled(TextField)(() => ({
